@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #efefef;
+    font-family: sans-serif;
+
+}
+.contact-box{
+    width: 500px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #999;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+form{
+    margin: 35px;
+}
+.input-field{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+    padding-left: 10px;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    outline: none;
+}
+.textarea-field{
+    height: 150px;
+    padding-top: 10px;
+}
+.main{
+background: linear-gradient(to top, rgb(133, 241, 245)10%, rgba(196, 162, 162, 0)50%), url("1.jpg");
+background-position: center;
+width: 100%;
+background-size: cover;
+height: 100vh;
+}
+.navbar{
+    width: 95%;
+    height: auto;
+    margin-left: 30px;
+    box-sizing: 18px;
+}
+.logo{
+    color: rgb(233, 27, 38);
+    font-size: 30px;
+    font-family: cursive;
+    float: left;
+    padding-top: .6%;
+    cursor: pointer;
+}
+.menu{
+    width: 500px;
+    float: left;
+    height: 30px;
+   
+    
+}
+
+ul{
+    float: left;
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14%;
+}
+ul li{
+    list-style: none;
+    margin-left: 60px;
+    font-size: 17px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(223, 105, 75);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    transition: 3s ease;
+}
+ul li a:hover{
+    color: rgb(2, 7, 1);
+}
+.search-box{
+    float: right; 
+    width: 180px;
+    background-color:rgb(255, 221, 221);
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 2%;
+    margin-right: 1%;
+    padding: 8px;
+
+}
+.search-box .search-txt{
+    width: 100%;
+    padding: 0 8px;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: #000;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+.btn{
+    border-radius: 20px;
+    color: #000;
+    margin-top: 18px;
+    padding: 10px;
+    background-color: rgb(39, 235, 0);
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
