@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
    if($insert){
       $message[] = 'It is available!';
    }else{
-      $message[] = 'Not Available';
+      $message[] = 'Not available';
    }
 
 }
