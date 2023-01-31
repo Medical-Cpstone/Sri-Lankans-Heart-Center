@@ -9,9 +9,9 @@ if(isset($_POST['submit'])){
    $insert = mysqli_query($conn, "INSERT INTO `pharmacy`(user_name, medicine_name');
 
    if($insert){
-      $message[] = 'payment made successfully!';
+      $message[] = 'It is Available!';
    }else{
-      $message[] = 'payment failed';
+      $message[] = 'Not Available';
    }
 
 }
