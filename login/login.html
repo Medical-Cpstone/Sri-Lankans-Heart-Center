@@ -12,9 +12,59 @@
 
 <h>
     <section>
-        <div class="menu-bar">
-            
-            <h1 class="logo"> Sri Lankan's <span>Heart Center</span></h1>
+       <section>
+    <div class="menu-bar">
+
+        <h1 class="logo"> Sri Lankan's <span>Heart Center</span></h1>
+        <ul>
+            <li><a href="#">Home<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="login/login.html">Login</a></li>
+                        <li><a href="diseases/diseases.html">Diseases</a></li>
+                    </ul>
+                </div>
+
+
+            </li>
+            <!--        ---------------------------------->
+            <li><a href="About_us/about_us.html">About us</a></li>
+            <!--        ==================---------------->
+            <li><a href="#">Services<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="doctor/doctor.html">Doctors</a></li>
+                        <li><a href="lab report/lab.html">Lab reports</a></li>
+                        <li><a href="pharmacy/pharmacy.html">Pharmacy</a></li>
+                        <li><a href="payments/payment.html">Payments</a></li>
+                        <li><a href="channeling_dr/channel_dr.html">Channeling</a></li>
+                    </ul>
+                </div>
+            </li>
+            <!--        ========================-->
+            <li><a href="contact/contact.html">Contact us</a>
+            </li>
+            <!------------------------>
+
+            <li>
+                <a href="Feedback 01/feedback.html">Feedback</a></li>
+
+            <!---------------------->
+            <li><a href=" map/map.html ">Location</a>
+            </li>
+
+            <!--        --------------->
+            <li><a href="# ">Sign up<i class="fas fa-caret-down "></i></a>
+                <div class="dropdown-menu ">
+                    <ul>
+                        <li><a href="dr_signup/dr_signup.html ">Doctor</a></li>
+                        <li><a href="patient_signup/patient_reg.html ">Patient</a></li>
+
+                    </ul>
+                </div>
+            </li>
+
+        </ul>
                
                     <div class="hero">
                     
@@ -25,23 +75,29 @@
                     <br><br><br><br>
 
         <body>
+            <form action = "login.php" method = "POST">
             <div class="form">
-                <h1>LOGIN HERE</h1>
+        <center>
+            <h1>LOGIN HERE</h1>
+            <br><br>
+        </center>
                 <p>Username :</p>
                 <input type="text" name="" placeholder="Name Here">
                 <p>Password :</p>
                 <input type="password" name="" placeholder="Password Here" id="pass">
-                <input type="checkbox" onclick="myfunction()">
+                <br><br>
+                <center>
+               <a href="mailto:srihrtcntr@gmail.com">Forgot password? </a>
                 <input type="submit" name="" value="LOGIN" onclick="validate()">
                 <br><br>
-                <a href="signup.html" class="link">Or Sign up</a>
-            </div>
-            
+                 <a href="dr_signup/dr_signup.html" class="btn">Not Registered Sign Up</a>
+         </div>     
+                </center>
             <div>
                 <p id="length"></p>
             </div>
-            
-            
+            </form>    
+          
             </body>
             
 </html>
