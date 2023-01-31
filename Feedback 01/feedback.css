@@ -1,121 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+    display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background: rgb(214, 81, 81);
+  font-family: sans-serif;
 }
 
-:root {
-	--yellow: #FFBD13;
-	--blue: #4383FF;
-	--blue-d-1: #3278FF;
-	--light: #F5F5F5;
-	--grey: #AAA;
-	--white: #FFF;
-	--shadow: 8px 8px 30px rgba(0,0,0,.05);
+.container{
+  position: relative;
+  width: 400px;
+  background: rgb(238, 154, 154);
+  padding: 50px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;   
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
 }
 
-body {
-	background: var(--light);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	padding: 1rem;
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before{
+  content: "I just hate it ";
+}
+#rate-2:checked ~ form header:before{
+  content: "I don't like it ";
+}
+#rate-3:checked ~ form header:before{
+  content: "It is awesome ";
+}
+#rate-4:checked ~ form header:before{
+  content: "I just like it ";
+}
+#rate-5:checked ~ form header:before{
+  content: "I just love it ";
 }
 
-
-
-
-
-
-.wrapper {
-	background: var(--grey);
-	padding: 2rem;
-	max-width: 576px;
-	width: 100%;
-	border-radius: .75rem;
-	box-shadow: var(--shadow);
-	text-align: center;
+input:checked ~ form{
+  display: block;
 }
-.wrapper h3 {
-	font-size: 1.5rem;
-	font-weight: 600;
-	margin-bottom: 1rem;
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
 }
-.rating {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	grid-gap: .5rem;
-	font-size: 2rem;
-	color: var(--yellow);
-	margin-bottom: 2rem;
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
 }
-.rating .star {
-	cursor: pointer;
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: rgb(255, 255, 255);
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
 }
-.rating .star.active {
-	opacity: 0;
-	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+.textarea textarea:focus{
+  border-color: #444;
 }
-
-@keyframes animate {
-	0% {
-		opacity: 0;
-		transform: scale(1);
-	}
-	50% {
-		opacity: 1;
-		transform: scale(1.2);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
+form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
 }
-
-
-.rating .star:hover {
-	transform: scale(1.1);
+form .btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-textarea {
-	width: 100%;
-	background: var(--light);
-	padding: 1rem;
-	border-radius: .5rem;
-	border: none;
-	outline: none;
-	resize: none;
-	margin-bottom: .5rem;
-}
-.btn-group {
-	display: flex;
-	grid-gap: .5rem;
-	align-items: center;
-}
-.btn-group .btn {
-	padding: .75rem 1rem;
-	border-radius: .5rem;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	font-size: .875rem;
-	font-weight: 500;
-}
-.btn-group .btn.submit {
-	background: var(--blue);
-	color: var(--white);
-}
-.btn-group .btn.submit:hover {
-	background: var(--green);
-}
-.btn-group .btn.cancel {
-	background: var(--white);
-	color: var(--blue);
-}
-.btn-group .btn.cancel:hover {
-	background: var(--light);
+form .btn button:hover{
+  background: #4e8d48;
 }
