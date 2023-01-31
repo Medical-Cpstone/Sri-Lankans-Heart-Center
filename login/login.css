@@ -5,112 +5,147 @@
   --color-black-1: #212b38;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    --color-primary: #000000;
+    --color-white: #e9e9e9;
+    --color-black: #b12b10;
+    --color-black-1: #212b38;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
- 
+    font-family: sans-serif;
 }
 
 .logo {
-  color: var(--color-white);
-  font-size: 30px;
+    color: var(--color-white);
+    font-size: 30px;
 }
 
 .logo span {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .menu-bar {
-  background-color: var(--color-black);
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-
-  position: relative;
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
 }
 
 .menu-bar ul {
-  list-style: none;
-  display: flex;
+    list-style: none;
+    display: flex;
 }
 
 .menu-bar ul li {
-  /* width: 120px; */
-  padding: 10px 30px;
-  /* text-align: center; */
-
-  position: relative;
+    /* width: 120px; */
+    padding: 10px 30px;
+    /* text-align: center; */
+    position: relative;
 }
 
 .menu-bar ul li a {
-  font-size: 20px;
-  color: var(--color-white);
-  text-decoration: none;
-
-  transition: all 0.3s;
+    font-size: 20px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
 .menu-bar ul li a:hover {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 .fas {
-  float: right;
-  margin-left: 10px;
-  padding-top: 3px;
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+
+/* dropdown menu style */
+
+.dropdown-menu {
+    display: none;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+.dropdown-menu-1 {
+    display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 0;
+    background-color: var(--color-black);
 }
 
 
 /*login page */
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 
-body{
-    background: linear-gradient(rgba(0,0,0,0.4)50%,rgba(0,0,0,0.4)50%);
-    background-image: url(file:///C:/Users/DELL/Downloads/my/drop-down-menu-main/img/medi.jpeg);
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4)50%, rgba(0, 0, 0, 0.4)50%);
+    background-image: url(medi.jpeg);
     background-position: center;
     background-size: cover;
     height: 100vh;
 }
 
-.form{
-    width: 450px;
-    height: 430px;
+.form {
+    width: 550px;
+    height: 450px;
     color: #fff;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     padding: 40px 25px;
     border-radius: 10px;
 }
 
-.form h1{
-    width: 220px;
+.form h1 {
+    width: 200px;
     text-align: center;
-    padding-left: 11px;
-    font-size: 35px;
+    font-size: 30px;
     color: #ff0000;
     margin-bottom: 20px;
 }
 
-.form p{
+.form p {
     padding-bottom: -15px;
 }
 
-.form input{
+.form input {
     width: 100%;
     height: 35px;
     padding-top: 5px;
@@ -126,8 +161,7 @@ body{
     letter-spacing: 1px;
 }
 
-.form input[type="submit"]
-{
+.form input[type="submit"] {
     width: 60%;
     margin-left: 50px;
     border: none;
@@ -139,7 +173,7 @@ body{
     border-radius: 15px;
 }
 
-.form input[type="submit"]:hover{
+.form input[type="submit"]:hover {
     cursor: pointer;
     background: #ff0000;
     color: #fff;
