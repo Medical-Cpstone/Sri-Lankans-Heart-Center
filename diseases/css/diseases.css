@@ -127,7 +127,7 @@ body {
 }
 
 .box {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     min-height: 400px;
@@ -137,7 +137,7 @@ body {
     height: 365px;
     width: 355px;
     padding: 20px 35px;
-    background: #e5a087;
+    background: #e3ae9b;
     border-radius: 20px;
     margin: 15px;
     position: relative;

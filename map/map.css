@@ -127,3 +127,10 @@ iframe {
     height: 500px;
     filter: invert(100%);
 }
+
+.copyright {
+    text-align: center;
+    background-color: #e05809;
+    color: #fff;
+    padding: 14px 0px;
+}
