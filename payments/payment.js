@@ -1,30 +1,3 @@
-function stripePay(event) {
-    event.preventDefault(); 
-    if(validateForm() == true) {
-     $('#payNow').attr('disabled', 'disabled');
-     $('#payNow').val('Payment Processing....');
-     Stripe.createToken({
-      number:$('#cardNumber').val(),
-      cvv:$('#CVV').val(),
-      exp_month : $('#ExpMonth').val(),
-      exp_year : $('#ExpYear').val()
-     }, stripeResponseHandler);
-     return false;
-    }
-}
-
-function stripeResponseHandler(status, response) {
- if(response.error) {
-  $('#payNow').attr('disabled', false);
-  $('#message').html(response.error.message).show();
- } else {
-  var stripeToken = response['id'];
-  $('#paymentForm').append("<input type='hidden' name='stripeToken' value='" + stripeToken + "' />");
-
-  $('#paymentForm').submit();
- }
-}
-
 function validateForm() {
  var validCard = 0;
  var valid = false;
@@ -40,8 +13,8 @@ function validateForm() {
  var Zipcode = $('#Zipcode').val();
  var validateName = /^[a-z ,.'-]+$/i;
  var validateEmail = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/;
- var validateMonth = /^01|02|03|04|05|06|07|08|09|10|11|12/;
- var validateYear = /^2017|2018|2019|2020|2021|2022|2023|2024|2025|2026|2027|2028|2029|2030|2031/;
+ var validateMonth = /^January|February|March|April|May|June|July|August|September|October|November|December/;
+ var validateYear = /^2024|2025|2026|2027|2028|20299|2030|2031|2031|2032/;
  var cvv_expression = /^[0-9]{3,3}/;
 
  $('#cardNumber').validateCreditCard(function(result){
