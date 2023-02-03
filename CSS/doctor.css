@@ -103,7 +103,7 @@ body {
 
 .hero {
     height: calc(100vh - 80px);
-    background-image: url(img/bgg.jpg);
+    background-image: url(/Images/bgg.jpg);
     background-position: center;
 }
 
