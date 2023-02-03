@@ -1,8 +1,8 @@
 :root {
-  --color-primary: #000000;
-  --color-white: #e9e9e9;
-  --color-black:#b12b10;
-  --color-black-1: #212b38;
+    --color-primary: #000000;
+    --color-white: #e9e9e9;
+    --color-black: #b12b10;
+    --color-black-1: #212b38;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
@@ -114,7 +114,7 @@ body {
 
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.4)50%, rgba(0, 0, 0, 0.4)50%);
-    background-image: url(medi.jpeg);
+    background-image: url(/Images/medi.jpeg);
     background-position: center;
     background-size: cover;
     height: 100vh;
