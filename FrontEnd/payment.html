@@ -1,165 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>payments</title>
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/payment.css">
-</head>
+    <link rel="stylesheet" href="/CSS/payment.css" />
+  </head>
 
-<body>
+  <body>
     <!-- section section starts  -->
     <section>
-        <div class="menu-bar">
+      <div class="menu-bar">
+        <h1 class="logo">Sri Lankan's <span>Heart Center</span></h1>
+        <ul>
+          <li>
+            <a href="#">Home<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="/FrontEnd/login.html">Login</a></li>
+                <li><a href="/FrontEnd/diseases.html">Diseases</a></li>
+              </ul>
+            </div>
+          </li>
+          <!--        ---------------------------------->
+          <li><a href="/FrontEnd/about_us.html">About us</a></li>
+          <!--        ==================---------------->
+          <li>
+            <a href="#">Services<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="/FrontEnd/doctor.html">Doctors</a></li>
+                <li><a href="/FrontEnd/lab.html">Lab reports</a></li>
+                <li><a href="/FrontEnd/pharmacy.html">Pharmacy</a></li>
+                <li><a href="/Frontend/payment.html">Payments</a></li>
+                <li><a href="/FrontEnd/channeling.html">Channeling</a></li>
+              </ul>
+            </div>
+          </li>
+          <!--        ========================-->
+          <li>
+            <a href="#">Contact us<i class="fas fa-caret-down"></i></a>
 
-            <h1 class="logo"> Sri Lankan's <span>Heart Center</span></h1>
-            <ul>
-                <li><a href="#">Home<i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a href="login/login.html">Login</a></li>
-                            <li><a href="diseases/diseases.html">Diseases</a></li>
-                        </ul>
-                    </div>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="contact/contact.html">Contact Us</a></li>
+                <li><a href="email/email.html">E-mail</a></li>
+              </ul>
+            </div>
+          </li>
+          <!------------------------>
 
+          <li><a href="/FrontEnd/Feedback.html">Feedback</a></li>
 
-                </li>
-                <!--        ---------------------------------->
-                <li><a href="About_us/about_us.html">About us</a></li>
-                <!--        ==================---------------->
-                <li><a href="#">Services<i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a href="doctor/doctor.html">Doctors</a></li>
-                            <li><a href="lab report/lab.html">Lab reports</a></li>
-                            <li><a href="pharmacy/pharmacy.html">Pharmacy</a></li>
-                            <li><a href="payments/payment.html">Payments</a></li>
-                            <li><a href="channeling.html">Channeling</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <!--        ========================-->
-                <li><a href="#">Contact us<i class="fas fa-caret-down"></i></a>
+          <!---------------------->
+          <li><a href="/FrontEnd/map.html">Location</a></li>
 
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a href="contact/contact.html">Contact Us</a></li>
-                            <li><a href="email/email.html">E-mail</a></li>
-
-                        </ul>
-                    </div>
-                </li>
-                <!------------------------>
-
-                <li><a href="feedback/Feedback.html">Feedback</a></li>
-
-                <!---------------------->
-                <li><a href="map/map.html">Location</a>
-                </li>
-
-                <!--        --------------->
-                <li><a href="#">Sign up<i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown-menu">
-                        <ul>
-                            <li><a href="dr_signup/dr_signup.html">Doctor</a></li>
-                            <li><a href="patient_signup/patient_reg.html">Patient</a></li>
-
-                        </ul>
-                    </div>
-                </li>
-
-            </ul>
-        </div>
-
+          <!--        --------------->
+          <li>
+            <a href="#">Sign up<i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-menu">
+              <ul>
+                <li><a href="/FrontEnd/dr_signup.html">Doctor</a></li>
+                <li><a href="/FrontEnd/patient_reg.html">Patient</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
-    <br><br><br><br><br><br><br>
+    <br /><br /><br /><br /><br /><br /><br />
     <div class="container">
+      <form action="payment.php" method="POST">
+        <div class="row">
+          <div class="col">
+            <h3 class="title">billing address</h3>
 
-        <form action="payment.php" method="POST">
-
-            <div class="row">
-
-                <div class="col">
-
-                    <h3 class="title">billing address</h3>
-
-                    <div class="inputBox">
-                        <span>full name :</span>
-                        <input type="text" placeholder="Kamala Pathirana">
-                    </div>
-                    <div class="inputBox">
-                        <span>email :</span>
-                        <input type="email" placeholder="example@example.com">
-                    </div>
-                    <div class="inputBox">
-                        <span>address :</span>
-                        <input type="text" placeholder="no. - street">
-                    </div>
-                    <div class="inputBox">
-                        <span>city :</span>
-                        <input type="text" placeholder="colombo">
-                    </div>
-
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>state :</span>
-                            <input type="text" placeholder="Sri Lanka">
-                        </div>
-                        <div class="inputBox">
-                            <span>zip code :</span>
-                            <input type="text" placeholder="81 000">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col">
-
-                    <h3 class="title">payment</h3>
-
-                    <div class="inputBox">
-                        <span>cards accepted :</span>
-                        <img src="images/img.png" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>name on card :</span>
-                        <input type="text" placeholder="Mrs. Kamala Pathirana">
-                    </div>
-                    <div class="inputBox">
-                        <span>credit card number :</span>
-                        <input type="number" placeholder="1111 2222 3333 4444">
-                    </div>
-                    <div class="inputBox">
-                        <span>exp month : </span>
-                        <input type="text" placeholder="march">
-                    </div>
-
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>exp year :</span>
-                            <input type="number" placeholder="2025">
-                        </div>
-                        <div class="inputBox">
-                            <span>CVV :</span>
-                            <input type="text" placeholder="123">
-                        </div>
-                    </div>
-
-
-                </div>
-
+            <div class="inputBox">
+              <span>full name :</span>
+              <input type="text" placeholder="Kamala Pathirana" />
+            </div>
+            <div class="inputBox">
+              <span>email :</span>
+              <input type="email" placeholder="example@example.com" />
+            </div>
+            <div class="inputBox">
+              <span>address :</span>
+              <input type="text" placeholder="no. - street" />
+            </div>
+            <div class="inputBox">
+              <span>city :</span>
+              <input type="text" placeholder="colombo" />
             </div>
 
-            <input type="submit" value="proceed to pay" class="submit-btn" a href="index.html">
-        </form>
-        <!--link to js--->
-        <script type="text/javascript " src="payment.js"></script>
+            <div class="flex">
+              <div class="inputBox">
+                <span>state :</span>
+                <input type="text" placeholder="Sri Lanka" />
+              </div>
+              <div class="inputBox">
+                <span>zip code :</span>
+                <input type="text" placeholder="81 000" />
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h3 class="title">payment</h3>
+
+            <div class="inputBox">
+              <span>cards accepted :</span>
+              <img src="/Images/img.png" alt="" />
+            </div>
+            <div class="inputBox">
+              <span>name on card :</span>
+              <input type="text" placeholder="Mrs. Kamala Pathirana" />
+            </div>
+            <div class="inputBox">
+              <span>credit card number :</span>
+              <input type="number" placeholder="1111 2222 3333 4444" />
+            </div>
+            <div class="inputBox">
+              <span>exp month : </span>
+              <input type="text" placeholder="march" />
+            </div>
+
+            <div class="flex">
+              <div class="inputBox">
+                <span>exp year :</span>
+                <input type="number" placeholder="2025" />
+              </div>
+              <div class="inputBox">
+                <span>CVV :</span>
+                <input type="text" placeholder="123" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input
+          type="submit"
+          value="proceed to pay"
+          class="submit-btn"
+          a
+          href="/index.html"
+        />
+      </form>
+      <!--link to js--->
+      <script type="text/javascript " src="/JS/payment.js"></script>
     </div>
-
-
-</body>
-
+  </body>
 </html>
