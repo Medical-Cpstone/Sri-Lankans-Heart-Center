@@ -133,8 +133,8 @@ body {
 }
 
 .gallery_product img {
-    width: 450px;
-    height: 300px;
+    width: 560px;
+    height: 400px;
     object-fit: cover;
     transition: all 0.5s ease;
 }
