@@ -103,7 +103,7 @@ body {
 
 .hero {
     height: calc(100vh - 80px);
-    background-image: url(img/bgg.jpg);
+    background-image: url(/Images/bgg.jpg);
     background-position: center;
 }
 
@@ -116,7 +116,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: (rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(img1.jpg);
+    background-image: (rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(/Images/bgg.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -174,4 +174,11 @@ body {
 
 p {
     color: #e9e9e9;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #e05809;
+    color: #fff;
+    padding: 14px 0px;
 }
