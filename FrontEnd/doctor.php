@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <link rel="stylesheet" href="./CSS/doctor.css">
+  <link rel="stylesheet" href="/CSS/doctor.css">
   <title>Our project</title>
 </head>
 
 <body>
 
   <section>
-    <?php include("./FrontEnd/navbar.php "); ?>
+    <?php include("/FrontEnd/navbar.php "); ?>
 
     <div class="hero">
 
@@ -41,7 +41,7 @@
         <img src="/Images/doctor2.jpg" style="width: 250px; height: 250px; border-radius: 12px;">
         <br>
         <br>
-        <a href="doctor2.html">Select</a>
+        <a href="./FrontEnd/doctor1.php">Select</a>
       </div>
       <div class="places">
         <h2>Dr.Asunga Dunuwille</h2>
