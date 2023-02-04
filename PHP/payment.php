@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','payment_data') or die('connection failed');
+$conn = mysqli_connect('localhost','root','','hospital') or die('connection failed');
 
 if(isset($_POST['submit'])){
 
