@@ -5,14 +5,7 @@
     font-family: 'Poppins', sans-serif;
 
 }
-.logo {
-    color: var(--color-white);
-    font-size: 20px;
-}
 
-.logo span {
-    color: var(--color-primary);
-}
 .section{
     width: 100%;
     min-height: 100vh;
