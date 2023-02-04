@@ -7,13 +7,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diseases</title>
 
-  <link rel="stylesheet" href="./CSS/diseases.css" />
+  <link rel="stylesheet" href="../CSS/diseases.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 
 <body>
   <!-- header section starts  -->
-  <?php include("./FrontEnd/navbar.php "); ?>
+
+  <section>
+    <div class="menu-bar">
+      <h1 class="logo">Sri Lankan's <span>Heart Center</span></h1>
+      <ul>
+        <li>
+          <a href="#">Home<i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="../FrontEnd/login.php">Login</a></li>
+              <li><a href="../FrontEnd/diseases.php">Diseases</a></li>
+            </ul>
+          </div>
+        </li>
+        <!--        ---------------------------------->
+        <li><a href="/FrontEnd/about_us.html">About us</a></li>
+        <!--        ==================---------------->
+        <li>
+          <a href="#">Services<i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="../FrontEnd/doctor.php">Doctors</a></li>
+              <li><a href="./FrontEnd/LAB.html">Lab reports</a></li>
+              <li><a href="./FrontEnd/pharmacy.html">Pharmacy</a></li>
+              <li><a href="../FrontEnd/payment.php">Payments</a></li>
+              <li><a href="./FrontEnd/channel_Dr.html">Channeling</a></li>
+            </ul>
+          </div>
+        </li>
+        <!--        ========================-->
+        <li><a href="./FrontEnd/contact.html">Contact us</a></li>
+        <!------------------------>
+
+        <li>
+          <a href="./FrontEnd/feedback.html">Feedback</a>
+        </li>
+
+        <!---------------------->
+        <li><a href="./FrontEnd/map.html">Location</a></li>
+
+        <!--        --------------->
+        <li>
+          <a href="# ">Sign up<i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="./FrontEnd/doctor_signup.html">Doctor</a></li>
+              <li><a href="./FrontEnd/patient_reg.html ">Patient</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
   <!-- header section ends  -->
 
   <!--content starts here-->

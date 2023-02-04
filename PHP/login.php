@@ -1,11 +1,11 @@
 <?php
-  $servername = "localhost";
-  $username = "username";
-  $password = "password";
-  $dbname = "login";
+  $host = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "heart_center";
 
   // Create a connection to the database
-  $conn = mysqli_connect($servername, $username, $password, $login);
+  $conn = mysqli_connect($host, $username, $password, $dbname);
 
   if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
@@ -15,7 +15,7 @@
     $username = mysqli_real_escape_string($conn, $username);
     $password = mysqli_real_escape_string($conn, $password);
 
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $sql = "SELECT * FROM login WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
