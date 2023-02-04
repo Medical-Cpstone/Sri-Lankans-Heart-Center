@@ -32,8 +32,9 @@
 }
 
 .image-section{
-    width: 100%;
-    height: auto;
+    width: 40%;
+    height: 30%;
+    float: right;
 }
 .image-section img{
     width: 100%;
