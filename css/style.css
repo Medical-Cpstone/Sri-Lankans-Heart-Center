@@ -146,6 +146,12 @@
     top: 0;
     background-color: var(--color-black);
 }
+.copyright {
+    text-align: center;
+    background-color: #e05809;
+    color: #fff;
+    padding: 14px 0px;
+}
 @media screen and (max-width : 768px){
     .container{
         width: 88%;
