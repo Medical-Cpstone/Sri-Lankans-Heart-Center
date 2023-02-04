@@ -3,8 +3,7 @@ function myfunction() {
 
     if (x.type === "password") {
         x.type = "text";
-    }
-    else {
+    } else {
         x.type = "password";
     }
 }
@@ -17,8 +16,7 @@ function validate() {
         alert("Login Succesfull");
         window.location.replace("doctor.html");
         return false;
-    }
-    else {
+    } else {
         alert("Login Failed");
     }
 }
