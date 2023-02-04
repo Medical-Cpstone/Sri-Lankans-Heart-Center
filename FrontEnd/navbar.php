@@ -30,7 +30,7 @@
           <a href="#">Services<i class="fas fa-caret-down"></i></a>
           <div class="dropdown-menu">
             <ul>
-              <li><a href="./FrontEnd/docotor.html">Doctors</a></li>
+              <li><a href="./FrontEnd/doctor.html">Doctors</a></li>
               <li><a href="./FrontEnd/LAB.html">Lab reports</a></li>
               <li><a href="./FrontEnd/pharmacy.html">Pharmacy</a></li>
               <li><a href="./FrontEnd/payment.html">Payments</a></li>
