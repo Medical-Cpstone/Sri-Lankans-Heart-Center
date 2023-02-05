@@ -147,8 +147,9 @@ form .btn button:hover {
 
 .btn-2 button {
     height: 50px;
-    width: 100%;
+    width: 320px;
     margin: 15px;
+    border: ipx solid #444;
     background-color: #222;
     color: #999;
     outline: none;
