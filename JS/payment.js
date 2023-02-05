@@ -1,30 +1,3 @@
-function stripePay(event) {
-    event.preventDefault();
-    if (validateForm() == true) {
-        $('#payNow').attr('disabled', 'disabled');
-        $('#payNow').val('Payment Processing....');
-        Stripe.createToken({
-            credit_card_number: $('#credit card number').val(),
-            cvv: $('#CVV').val(),
-            exp_month: $('#ExpMonth').val(),
-            exp_year: $('#ExpYear').val()
-        }, stripeResponseHandler);
-        return false;
-    }
-}
-
-function stripeResponseHandler(status, response) {
-    if (response.error) {
-        $('#payNow').attr('disabled', false);
-        $('#message').html(response.error.message).show();
-    } else {
-        var stripeToken = response['id'];
-        $('#paymentForm').append("<input type='hidden' name='stripeToken' value='" + stripeToken + "' />");
-
-        $('#paymentForm').submit();
-    }
-}
-
 function validateForm() {
     var validCard = 0;
     var valid = false;
