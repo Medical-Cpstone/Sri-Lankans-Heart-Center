@@ -1,4 +1,4 @@
-function myfunction() {
+function myFunction() {
     var x = document.getElementById("pass");
 
     if (x.type === "password") {
@@ -13,7 +13,7 @@ function validate() {
     var length = document.getElementById("length");
 
     if (password.value.length >= 8) {
-        alert("Login Succesfull");
+        alert("Login Successful");
         window.location.replace("doctor.html");
         return false;
     } else {
