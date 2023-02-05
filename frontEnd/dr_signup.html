@@ -81,22 +81,34 @@ button:hover {
 }
 </style>
 <script type="text/javascript">
-    function validate(){
 
-        if (document.dr_signup.Name.value.trim == "")
+
+function validate() {
+    var password = document.getElementById("Name");
+    var password = document.getElementById("doctor_id");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+
+    if (document.dr_signup.Name.value.trim == "")
         {
             alert("Please enter your name!");
             document.dr_signup.Name.focus();
             return false;
         }
-        if (document.dr_signup.ID.value.trim == "")
-        {
-            alert("Please enter your 4 digit Doctor ID!");
-            document.dr_signup.ID.focus();
-            return false;
+        else {
+          alert("Signup Failed");
         }
-       
-    }                       
+
+    if (password.value.length.trim =4) {
+        alert("sign up successfully");
+        window.location.replace("/FrontEnd/index.html");
+        return false;
+    }
+    else {
+        alert("Signup Failed");
+    }
+}
+                            
 
 </script>
 </head>
@@ -113,7 +125,9 @@ button:hover {
     <input type="text" id="doctor_name" name="Name" placeholder=""><br>
     
     <p>Doctor ID:</p>
-    <input type="password" id="doctor_id" name="ID" placeholder="xxxx"> <br><br>
+    <input type="password" id="doctor_id" name="ID" placeholder="xxxx">
+    <p id="number" class="invalid"></p>
+  <p id="length" class="invalid"></p> <br><br>
     
     <button type="submit">Signup</button>
     
@@ -125,3 +139,49 @@ button:hover {
 
 </body>
 </html>
+<!---    function validate(){
+
+        if (document.dr_signup.Name.value.trim == "")
+        {
+            alert("Please enter your name!");
+            document.dr_signup.Name.focus();
+            return false;
+        }
+        if (document.dr_signup.ID.value.trim == "")
+        {
+            alert("Please enter your 4 digit Doctor ID!");
+            document.dr_signup.ID.focus();
+            return false;
+        }
+        var myInput = document.getElementById("doctor_id");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        {
+          var numbers = /[0-9]/g;
+          if(myInput.value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+          } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+          }
+          // Validate length
+         if(myInput.value.length >= 8) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+        }
+        function myfunction() {
+    var x = document.getElementById("doctor_id");
+
+    if (x.type === "password") {
+        x.type = "text";
+    }
+    else {
+        x.type = "password";
+    }
+}
+-->
