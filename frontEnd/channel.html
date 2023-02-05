@@ -81,6 +81,40 @@ button:hover {
 }
 
 </style>
+<script type="text/javascript">
+  function validate()
+  {
+    if (document.channel_form.Name.value == "-1")
+    {
+      alert("Please select an option!");
+      document.channel_form.Name.focus();
+      return false;
+
+    }
+    if (document.channel_form.ID.value == "-1")
+    {
+      alert("Please select an option!");
+      document.channel_form.ID.focus();
+      return false;
+
+    }
+    if (document.channel_form.branch.value == "-1")
+    {
+      alert("Please select an option!");
+      document.channel_form.branch.focus();
+      return false;
+
+    }
+    if (document.channel_form.any_date.value == "")
+    {
+      alert("Please select available date!");
+      document.channel_form.any_date.focus();
+      return false;
+
+    }
+  }
+
+</script>
 </head>
 <body>
 
@@ -89,10 +123,10 @@ button:hover {
 <div class="bg-text">
 <h1><b>Meet Your Doctor</b></h1>
  
-<form action="connect.php" method="post">
+<form action="/PHP/connact.php" method="post" name="channel_form" onsubmit="return validate()">
     
-    <p>Doctor Name:</p>
-    <select name="Doctor Name:"id="doctor_name">
+    <p>Doctor Name:</p> 
+    <select name="Name" id="doctor_name"  placeholder="Select Doctor Name ">
         <option value="-1" selected>Select</option>
         <option value="1" selected>Dr.Roshan Gunawardana</option>
         <option value="2" selected>Dr.Sushani Amarasigghe</option>
@@ -103,7 +137,7 @@ button:hover {
     </select>
     
     <p>Doctor ID:</p>
-    <select name="Doctor ID:" id="doctor_id" >
+    <select name="ID" id="doctor_id" >
         <option value="-1" selected>Select</option>
         <option value="1" selected>7346</option>
         <option value="2" selected>7349</option>
@@ -114,7 +148,7 @@ button:hover {
     </select>
    
     <p>Hospital Branch:</p>
-    <select name="Hospital Branch:" id="branch" >
+    <select name="branch" id="branch" >
         <option value="-1" selected>Select</option>
         <option value="1" selected>SHC Tele Doctor Service</option>
         <option value="2" selected>SHC Colombo</option>
@@ -123,7 +157,6 @@ button:hover {
         <option value="5" selected>SHC Jaffna</option>
         <option value="6" selected>SHC Anuradhapura</option>
         <option value="7" selected>SHC Matara</option>
-
     </select>
     
     <p>Any Date:</p>
@@ -134,7 +167,8 @@ button:hover {
     
     <div><p>Search for a Doctor? <a href="/FrontEnd/doctor.html"> Search</a></p></div>
 
-    <p>You will get the appointment details via sms  whithin 1h.</p>
+
+    <p>You will get the appointment details via sms  whithin 1h.<br>or <a href="/FrontEnd/index.html">Back</a></p>
 </form>
 </div>
 
