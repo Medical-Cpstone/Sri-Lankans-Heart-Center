@@ -1,15 +1,15 @@
 <?php
-     $con= mysqli_connect("Localhost","root","Zahra@2212","Hospital");
+     $con= mysqli_connect("localhost","root","Zahra@2212","hospital");
 
 
      if(!$con){
-          die("Could not connect".mysql_error());
+          die('Could not connect'.mysql_error());
 
      }else{
           echo 'Connection  Established Successfully';
           echo nl2br ("\n");
 
-          $sql="INSERT INTO chennel_dr(doctor_name,doctor_id,branch,any_date )
+          $sql="INSERT INTO channel_dr(doctor_name,doctor_id,branch,any_date )
           VALUES
           ('$_POST[doctor_name]',
           '$_POST[doctor_id]',
