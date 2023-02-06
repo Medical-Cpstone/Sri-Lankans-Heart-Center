@@ -1,37 +1,38 @@
 function validateForm() {
-    var validCard = 0;
+    var validCredit_card_number = 0;
     var valid = false;
-    var CVV = $('#CVV').val();
-    var ExpMonth = $('#ExpMonth').val();
-    var ExpYear = $('#ExpYear').val();
-    var credit_card_number = $('#credit card number').val();
-    var email = $('#email').val();
-    var fullName = $('#fullName').val();
-    var Address = $('#Address').val();
-    var City = $('#City').val();
-    var State = $('#State').val();
-    var Zipcode = $('#Zipcode').val();
-    var validateName = /^[a-z ,.'-]+$/i;
+    var cvv = $('#cvv').val();
+    var Exp_month = $('#exp_month').val();
+    var Exp_year = $('#exp_year').val();
+    var credit_card_number = $('#credit_card_number').val();
+    var Email = $('#email').val();
+    var Full_name = $('#fname').val();
+    var Address = $('#adress').val();
+    var City = $('#city').val();
+    var State = $('#stat').val();
+    var Zip_code = $('#zip_code').val();
+    var Name_on_card = $('#name_on_card').val()
+    var validateFull_name = /^[a-z ,.'-]+$/i;
     var validateEmail = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/;
-    var validateMonth = /^January|February|March|April|May|June|July|August|September|October|November|December/;
-    var validateYear = /^2017|2018|2019|2020|2021|2022|2023|2024|2025|2026|2027|2028|2029|2030|2031/;
-    var cvv_expression = /^[0-9]{3,3}/;
+    var validateExp_month = /^January|February|March|April|May|June|July|August|September|October|November|December/;
+    var validateExp_year = /^2017|2018|2019|2020|2021|2022|2023|2024|2025|2026|2027|2028|2029|2030|2031/;
+    var cvv = /^[0-9]{3,3}/;
 
-    $('#credit card number').validateCreditCard(function(result) {
+    $('#credit_card_number').validateCreditCard(function(result) {
         if (result.valid) {
-            $('#credit card number').removeClass('require');
+            $('#credit_card_number').removeClass('require');
             $('#errorCardNumber').text('');
             validCard = 1;
         } else {
-            $('#credit card number').addClass('require');
+            $('#credit_card_number').addClass('require');
             $('#errorCardNumber').text('Invalid Card Number');
             validCard = 0;
         }
     });
 
     if (validCard == 1) {
-        if (!validateMonth.test(ExpMonth)) {
-            $('#ExpMonth').addClass('require');
+        if (!validateMonth.test(Exp_month)) {
+            $('#exp_month').addClass('require');
             $('#errorExpMonth').text('Invalid Data');
             valid = false;
         } else {
@@ -40,19 +41,19 @@ function validateForm() {
             valid = true;
         }
 
-        if (!validateYear.test(ExpYear)) {
-            $('#ExpYear').addClass('require');
+        if (!validateYear.test(Exp_year)) {
+            $('#exp_year').addClass('require');
             $('#errorExpYear').error('Invalid Data');
             valid = false;
         } else {
-            $('#ExpYear').removeClass('require');
+            $('#exp_year').removeClass('require');
             $('#errorExpYear').error('');
             valid = true;
         }
 
         if (!cvv_expression.test(CVV)) {
-            $('#CVV').addClass('require');
-            $('#errorCardCvc').text('Invalid Data');
+            $('#cvv').addClass('require');
+            $('#errorCardCvv').text('Invalid Data');
             valid = false;
         } else {
             $('#CVV').removeClass('require');
@@ -60,17 +61,17 @@ function validateForm() {
             valid = true;
         }
 
-        if (!validateName.test(fullName)) {
-            $('#fullName').addClass('require');
-            $('#errorfullName').text('Invalid Name');
+        if (!validateName.test(Full_name)) {
+            $('#fname').addClass('require');
+            $('#errorFullName').text('Invalid Name');
             valid = false;
         } else {
-            $('#fullName').removeClass('require');
-            $('#errorfullName').text('');
+            $('#fname').removeClass('require');
+            $('#errorFullName').text('');
             valid = true;
         }
 
-        if (!validateEmail.test(email)) {
+        if (!validateEmail.test(Email)) {
             $('#email').addClass('require');
             $('#erroremail').text('Invalid Email Address');
             valid = false;
@@ -81,42 +82,52 @@ function validateForm() {
         }
 
         if (Address == '') {
-            $('#Address').addClass('require');
+            $('#adress').addClass('require');
             $('#errorAddress').text('Enter Address Detail');
             valid = false;
         } else {
-            $('#Address').removeClass('require');
+            $('#adress').removeClass('require');
             $('#errorAddress').text('');
             valid = true;
         }
 
         if (City == '') {
-            $('#City').addClass('require');
+            $('#city').addClass('require');
             $('#errorCity').text('Enter City');
             valid = false;
         } else {
-            $('#City').removeClass('require');
+            $('#city').removeClass('require');
             $('#errorCity').text('');
             valid = true;
         }
 
         if (State == '') {
-            $('#State').addClass('require');
-            $('#errorState').text('Enter Country ');
+            $('#stat').addClass('require');
+            $('#errorState').text('Enter Country');
             valid = false;
         } else {
-            $('#State').removeClass('require');
+            $('#stat').removeClass('require');
             $('#errorState').text('');
             valid = true;
         }
 
-        if (Zipcode == '') {
-            $('#Zipcode').addClass('require');
-            $('#errorCustomerZipcode').text('Enter Zip code');
+        if (Zip_code == '') {
+            $('#zip_code').addClass('require');
+            $('#errorCustomerZipCode').text('Enter Zip code');
             valid = false;
         } else {
-            $('#Zipcode').removeClass('require');
-            $('#errorZipcode').text('');
+            $('#zip_code').removeClass('require');
+            $('#errorZipCode').text('');
+            valid = true;
+        }
+
+        if (Name_on_card == '') {
+            $('#name_on_card').addClass('require');
+            $('errorNameOnCard').text('Enter Name On Card');
+            valid = false;
+        } else {
+            $('#name_on_card').removeClass('require');
+            $('#errorNameOnCard').text('');
             valid = true;
         }
 
