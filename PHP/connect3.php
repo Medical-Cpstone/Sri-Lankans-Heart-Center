@@ -1,17 +1,8 @@
 <?php
-<<<<<<< Updated upstream
      $con= mysqli_connect("localhost","root","Zahra@2212","hospital");
-
-
-     if(!$con){
-          die('Could not connect'.mysql_error());
-=======
-     $con= mysqli_connect("Localhost","root","Zahra@2212","hospital");
-
 
      if(!$con){
           die("Could not connect".mysqli_error());
->>>>>>> Stashed changes
 
      }else{
           echo 'Connection  Established Successfully';
