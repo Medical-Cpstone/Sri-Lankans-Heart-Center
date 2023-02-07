@@ -133,8 +133,13 @@ function validateForm() {
             valid = true;
         }
 
-
-
+        if (credit_card_number.length = 16) {
+            alert("Payment Successful");
+            window.location.replace("index.html");
+            return false;
+        } else {
+            alert("Payment Failed");
+        }
     }
-    return valid;
+
 }
