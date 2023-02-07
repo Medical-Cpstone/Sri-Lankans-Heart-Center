@@ -77,6 +77,21 @@
     <script type="text/javascript">
         //form validation code will come here
         function validation()
+        const form=document.querySelector("form"),
+               btn=form.querySelector(".btn")
+               allinput=form.querySelector(".first input");
+
+        btn.addEventListener("click",()=>{
+            allinput.forEach(input =>{
+                if(input.value!=""){
+                    form.tagName.add('secActive');
+                }else{
+                    form.tagName.add('secAdtive');
+                }
+            })
+
+
+        } )      
         {
             if(document.reg_form.f_name.value=="")
             {
@@ -144,7 +159,7 @@
                 document.reg_form.phn_no.focus();
                 return false;
             }
-            
+            else
         }
     </script>
 </head>
@@ -202,7 +217,7 @@
                 <input type="phone" name="phn_no" placeholder="+94xxxxxxxxxx">
             </div>
 
-            <button type="submit">Signup</button>
+            <button type="submit" name="btn">Signup</button>
         </div>
         <!-- wrapping the text inside the p tag with a tag for routing to the login page URL-->
         <!-- the # must ideally be replaced by the login page URL -->
