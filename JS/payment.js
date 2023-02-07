@@ -138,7 +138,7 @@ function validateForm() {
             var length = document.getElementById("length");
             if (credit_card_number.length = 16) {
                 alert("Payment Successful");
-                window.location.replace("index.html");
+                window.location.replace("/index.html");
                 return false;
             } else {
                 alert("Payment Failed");
