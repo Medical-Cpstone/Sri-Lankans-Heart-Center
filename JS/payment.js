@@ -133,12 +133,16 @@ function validateForm() {
             valid = true;
         }
 
-        if (credit_card_number.length = 16) {
-            alert("Payment Successful");
-            window.location.replace("index.html");
-            return false;
-        } else {
-            alert("Payment Failed");
+        function validate() {
+            var Credit_card_number = document.getElementById("require");
+            var length = document.getElementById("length");
+            if (credit_card_number.length = 16) {
+                alert("Payment Successful");
+                window.location.replace("/index.html");
+                return false;
+            } else {
+                alert("Payment Failed");
+            }
         }
     }
 
