@@ -195,3 +195,7 @@ body {
 .container form .submit-btn:hover {
     background: #e05809;
 }
+
+.color-red {
+    color: red;
+}
