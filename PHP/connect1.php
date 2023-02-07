@@ -2,7 +2,7 @@
      $con= mysqli_connect("localhost","root","Zahra@2212","hospital");
 
      if(!$con){
-          die("Could not connect".mysqli_error());
+          die("Could not connect".mysql_error());
 
 
      }else{
@@ -18,7 +18,7 @@
      }
 
      if(!mysqli_query($con,$sql)){
-          die('Error'.mysqli_error());
+          die('Error'.mysql_error());
      }else{
           echo 'your record added successfully';
      }
