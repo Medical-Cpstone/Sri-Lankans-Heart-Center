@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>payments</title>
-
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="../CSS/payment.css" />
+    <title>payment</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" />
+    <link rel="stylesheet" href="payment.css">
+    <link rel="text/javascript" href="payment.js">
 </head>
 
 <body>
@@ -68,86 +68,59 @@
             </ul>
         </div>
     </section>
-    <br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /></br>
+    <br /><br /><br /><br />
 
-    <div class="container">
-        <form action="/PHP/payment.php " method="POST ">
-            <div class="row">
-                <div class="col">
-                    <h3 class="title">billing address</h3>
-
-                    <div class="inputBox">
-                        <span>Full_name :</span>
-                        <input type="text " placeholder="Kamala Pathirana " />
-                    </div>
-                    <div class="inputBox">
-                        <span>Email :</span>
-                        <input type="email " placeholder="example@example.com " />
-                    </div>
-                    <div class="inputBox">
-                        <span>Address :</span>
-                        <input type="text " placeholder="no. - street " />
-                    </div>
-                    <div class="inputBox">
-                        <span>City :</span>
-                        <input type="text " placeholder="colombo " />
-                    </div>
-
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>State :</span>
-                            <input type="text " placeholder="Sri Lanka " />
-                        </div>
-                        <div class="inputBox">
-                            <span>zip_code :</span>
-                            <input type="text " placeholder="81 000 " />
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <h3 class="title">payment</h3>
-
-                    <div class="inputBox">
-                        <span>cards accepted :</span>
-                        <img src="../Images/img.png " alt=" " />
-                    </div>
-                    <div class="inputBox">
-                        <span>Name on card :</span>
-                        <input type="text " placeholder="Mrs. Kamala Pathirana " />
-                    </div>
-                    <div class="inputBox">
-                        <span>Credit card number :</span>
-                        <input type="number " placeholder="1111 2222 3333 4444 " />
-                    </div>
-                    <div class="inputBox">
-                        <span>Exp month : </span>
-                        <input type="text " placeholder="march " />
-                    </div>
-
-                    <div class="flex">
-                        <div class="inputBox">
-                            <span>Exp year :</span>
-                            <input type="number " placeholder="2025 " />
-                        </div>
-                        <div class="inputBox">
-                            <span>cvv:</span>
-                            <input type="text " placeholder="123 " />
-                        </div>
-                    </div>
-                </div>
+    <div class="wrapper">
+        <div class="payment">
+            <div class="payment-logo">
+                <p>p</p>
             </div>
 
-            <input type="submit " value="proceed to pay " class="submit-btn" onclick="validate() " />
-            <br /><br />
-            <center>
-                <p>
-                    <span class="color-red">*</span>&nbsp;Channeling fees will be Rs. 1500.00
-                </p>
-            </center>
-        </form>
-        <!--link to js--->
-        <script type="text/javascript " src="/JS/payment.js"></script>
+            <h2>PAY HERE</h2>
+            <div class="form" action="/PHP/payment.php">
+                <div class="card space icon-relative">
+                    <label class="label">Card Holder Name:</label>
+                    <input type="text" class="input" name="card_holder" placeholder="Insert name" />
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="card space icon-relative">
+                    <label class="label">Card Number:</label>
+                    <input type="text" class="input" data-mask="0000 0000 0000 0000" name="card_number" placeholder="Card Number" data-mask="0000 0000 0000 0000" />
+                    <i class="far fa-credit-card"></i>
+                </div>
+                <div class="card-grp space">
+                    <div class="card-item icon-relative">
+                        <label class="label">Expiry Date:</label>
+                        <input type="text" name="expiry-data" class="input" name="expiry_date" placeholder="00 / 00" data-mask="00 / 00" />
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <div class="card-item icon-relative">
+                        <label class="label">CVC:</label>
+                        <input type="text" class="input" data-mask="000" name="cvc" placeholder="000" data-mask="000" />
+                        <i class="fas fa-lock"></i>
+                    </div>
+                </div>
+                <a style="text-decoration: none;" href="/index.html">
+                    <div class="btn">Proceed To Pay</div>
+                </a>
+                <br>
+                <center>
+                    <p>
+                        <span class=" color-red ">*</span>&nbsp;Channeling fee will be Rs. 1500.00
+                    </p>
+                </center>
+            </div>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js "></script>
 </body>
+
+<footer>
+    <p class=" copyright "> ©2022 All rights reserved | Made by Team Medical Capstone
+    </p>
+</footer>
 
 </html>
