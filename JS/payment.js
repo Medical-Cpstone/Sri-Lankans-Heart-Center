@@ -1,4 +1,4 @@
-function validateForm() {
+function validate() {
 
     var validCredit_card_number = 0;
     var valid = false;
