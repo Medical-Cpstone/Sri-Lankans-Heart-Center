@@ -77,21 +77,7 @@
     <script type="text/javascript">
         //form validation code will come here
         function validation()
-        const form=document.querySelector("form"),
-               btn=form.querySelector(".btn")
-               allinput=form.querySelector(".first input");
-
-        btn.addEventListener("click",()=>{
-            allinput.forEach(input =>{
-                if(input.value!=""){
-                    form.tagName.add('secActive');
-                }else{
-                    form.tagName.add('secAdtive');
-                }
-            })
-
-
-        } )      
+           
         {
             if(document.reg_form.f_name.value=="")
             {
@@ -229,3 +215,19 @@
 </body>
 
 </html>
+
+<!---const form=document.querySelector("form"),
+               btn=form.querySelector(".btn")
+               allinput=form.querySelector(".first input");
+
+        btn.addEventListener("click",()=>{
+            allinput.forEach(input =>{
+                if(input.value!=""){
+                    form.tagName.add('secActive');
+                }else{
+                    form.tagName.add('secAdtive');
+                }
+            })
+
+
+        } )   -->
