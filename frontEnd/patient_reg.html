@@ -124,9 +124,9 @@
                 document.reg_form.pwd.focus();
                 return false;
             }
-            if (document.reg_form.pwd - repeat.value == "") {
+            if (document.reg_form.pwd-repeat.value == "") {
                 alert("Please provide your Confirm Password");
-                document.reg_form.pwd - repeat.focus();
+                document.reg_form.pwd-repeat.focus();
                 return false;
             }
             if (document.reg_form.phn_no.value == "") {
@@ -135,13 +135,20 @@
                 return false;
             }
         }
+        function loadPage(){
+     var theURL = window.FrontEnd/patient_reg.html.reg_form;
+     var newURL = FrontEnd/patient_reg.html.replace("/FrontEnd/", "/index.html/");
+     //Set URL
+     window.location.href = index.html;
+}
+       
     </script>
 </head>
 
 <body>
 
 
-    <form action="/PHP/connect1.php" method="post" name="reg_form" onsubmit="return validation()">
+    <form action="/PHP/connect1.php" method="post"  name="reg_form" onsubmit="return validation()">
 
         <div class="container">
             <h1>Register</h1>
@@ -183,6 +190,10 @@
             <label for="pwd"><b>Password :</b></label>
             <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required/>
 
+            <div>
+                <p id="length "></p>
+            </div>
+
             <label for="pwd-repeat"><b>Confirm Password :</b></label>
             <input type="password" placeholder="Confirm Password" name="pwd-repeat" id="pwd_repeat" required/>
 
@@ -191,12 +202,12 @@
                 <input type="phone" name="phn_no" placeholder="+94xxxxxxxxxx">
             </div>
 
-            <button type="submit" name="btn">Signup</button>
+            <button type="submit" name="btn" onclick="loadPage()">Signup</a></button>
         </div>
         <!-- wrapping the text inside the p tag with a tag for routing to the login page URL-->
         <!-- the # must ideally be replaced by the login page URL -->
         <div>
-            <p>Already have an account? <a href="../FrontEnd/login.html">Log in</a></p>
+            <p>Already have an account? <a href="../FrontEnd/login.html">Log in</a><br><br>or <a href="/index.html">Go Back</a></p>
         </div>
     </form>
 
