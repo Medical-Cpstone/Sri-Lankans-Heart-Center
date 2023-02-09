@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -6,7 +6,8 @@ body{
     align-items: center;
     justify-content: center;
 }
-.bg{
+
+.bg {
     background: url(1.jpg);
     height: 100vh;
     width: 100%;
@@ -17,7 +18,8 @@ body{
     opacity: 0.7;
     filter: brightness(75%);
 }
-.terms-box{
+
+.terms-box {
     max-width: 900px;
     background-color: rgba(236, 43, 9, 0.1);
     color: rgb(189, 190, 201);
@@ -27,7 +29,8 @@ body{
     overflow-y: auto;
     font-size: 14px;
 }
-.terms-text{
+
+.terms-text {
     padding: 0 20px;
     height: 400px;
     overflow-y: auto;
@@ -35,32 +38,39 @@ body{
     font-weight: 500;
     color: #111;
 }
-.terms-text::-webkit-scrollbar{
+
+.terms-text::-webkit-scrollbar {
     width: 2px;
     background-color: #282828;
 }
-.terms-text::-webkit-scrollbar-thumb{
+
+.terms-text::-webkit-scrollbar-thumb {
     background-color: #e07676;
 }
-.terms-text h2{
+
+.terms-text h2 {
     text-transform: uppercase;
 }
-.terms-text h4{
+
+.terms-text h4 {
     font-size: 13px;
     text-align: center;
     padding: 0 40px;
 }
-.terms-box h4 span{
+
+.terms-box h4 span {
     color: rgb(245, 68, 68);
     text-transform: uppercase;
 }
-.buttons{
+
+.button {
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
     padding-bottom: 50px;
 }
-.btn{
+
+.a btn {
     height: 50px;
     width: calc(50% - 6px);
     border: 0;
@@ -71,12 +81,15 @@ body{
     transition: .3s linear;
     cursor: pointer;
 }
-.red-btn{
+
+.a red-btn {
     background-color: rgb(245, 68, 68);
 }
-.gray-btn{
+
+.gray-btn {
     background-color: #282828;
 }
-.btn:hover{
+
+.btn:hover {
     opacity: .6;
 }
