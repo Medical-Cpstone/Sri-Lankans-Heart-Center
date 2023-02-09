@@ -4,6 +4,7 @@
 
      if(!$con){
           die("Could not connect".mysqli_connect_error());
+          die("Could not connect".$mysqli_error());
 
      }else{
           echo 'Connection  Established Successfully';
@@ -22,7 +23,7 @@
           die('Error'.$mysqli_error());
      }else{
           echo 'your record added successfully';
-          
+        
      }
      mysqli_close($con);
 ?>
