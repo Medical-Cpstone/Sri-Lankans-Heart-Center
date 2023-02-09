@@ -8,7 +8,7 @@
     <title>payment</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" />
     <link rel="stylesheet" href="../CSS/payment.css">
-    <link rel="text/javascript" href="/JS/payment.js">
+    <link rel="text/javascript" href="../JS/payment.js">
 </head>
 
 <body>
@@ -35,11 +35,11 @@
                     <div class="dropdown-menu">
                         <ul>
                             <li><a href="doctor.html">Doctors</a></li>
-                            <li><a href="/LAB/index.html">Lab reports</a></li>
-                            <li><a href="/pharmacy/pharmacy.html">Pharmacy</a></li>
+                            <li><a href="../LAB/index.html">Lab reports</a></li>
+                            <li><a href="../pharmacy/pharmacy.html">Pharmacy</a></li>
                             <li><a href="payment.html">Payments</a></li>
                             <li>
-                                <a href="/FrontEnd/channel.html">Channeling</a>
+                                <a href="../FrontEnd/channel.html">Channeling</a>
                             </li>
                         </ul>
                     </div>
@@ -60,8 +60,8 @@
                     <a href="# ">Sign up<i class="fas fa-caret-down"></i></a>
                     <div class="dropdown-menu">
                         <ul>
-                            <li><a href="/FrontEnd/dr_signup.html">Doctor</a></li>
-                            <li><a href="/FrontEnd/patient_reg.html">Patient</a></li>
+                            <li><a href="../FrontEnd/dr_signup.html">Doctor</a></li>
+                            <li><a href="../FrontEnd/patient_reg.html">Patient</a></li>
                         </ul>
                     </div>
                 </li>
@@ -78,40 +78,42 @@
             </div>
 
             <h2>PAY HERE</h2>
-            <div class="form" action="/PHP/payment.php" method="POST">
-                <div class="card space icon-relative">
-                    <label class="label">Card Holder Name:</label>
-                    <input type="text" class="input" name="card_holder" placeholder="Insert name" />
-                    <i class="fas fa-user"></i>
+            <div class="form" action="../PHP/payment.php" method="post" name="payment_table">
+                <div class="card space icon-relative ">
+                    <label class="label ">Card Holder Name:</label>
+                    <input type="text " class="input" name="card_holder" placeholder="Insert name " />
+                    <i class="fas fa-user "></i>
                 </div>
-                <div class="card space icon-relative">
-                    <label class="label">Card Number:</label>
-                    <input type="text" class="input" data-mask="0000 0000 0000 0000" name="card_number" placeholder="Card Number" data-mask="0000 0000 0000 0000" />
-                    <i class="far fa-credit-card"></i>
+                <div class="card space icon-relative ">
+                    <label class="label ">Card Number:</label>
+                    <input type="text " class="input" data-mask="0000 0000 0000 0000 " name="card_number" placeholder="Card Number " data-mask="0000 0000 0000 0000 " />
+                    <i class="far fa-credit-card "></i>
                 </div>
-                <div class="card-grp space">
-                    <div class="card-item icon-relative">
-                        <label class="label">Expiry Date:</label>
-                        <input type="text" class="input" name="exp_date" placeholder="00 / 00" data-mask="00 / 00" />
-                        <i class="far fa-calendar-alt"></i>
+                <div class="card-grp space ">
+                    <div class="card-item icon-relative ">
+                        <label class="label ">Expiry Date:</label>
+                        <input type="text " class="input" name="exp_date" placeholder="00 / 00" data-mask="00 / 00 " />
+                        <i class="far fa-calendar-alt "></i>
                     </div>
-                    <div class="card-item icon-relative">
-                        <label class="label">CVC:</label>
-                        <input type="text" class="input" data-mask="000" name="cvc" placeholder="000" data-mask="000" />
-                        <i class="fas fa-lock"></i>
+                    <div class="card-item icon-relative ">
+                        <label class="label ">CVC:</label>
+                        <input type="text " class="input" data-mask="000 " name="cvc" placeholder="000 " data-mask="000 " />
+                        <i class="fas fa-lock "></i>
                     </div>
                 </div>
-                <a style="text-decoration: none;" href="../index.html">
+                <a href="/FrontEnd/popup.html" style="text-decoration: none;">
                     <div class="btn">Proceed To Pay</div>
                 </a>
                 <br>
-                <center>
-                    <p>
-                        <span class=" color-red ">*</span>&nbsp;Channeling fee will be Rs. 1500.00
-                    </p>
-                </center>
             </div>
+            </form>
+            <center>
+                <p>
+                    <span class=" color-red ">*</span>&nbsp;Channeling fee will be Rs. 1500.00
+                </p>
+            </center>
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.3.min.js "></script>

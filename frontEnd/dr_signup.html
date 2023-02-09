@@ -34,10 +34,11 @@
         background-size: cover;
     }
     /* Position text in the middle of the page/image */
-    .back{
+    
+    .back {
         text-decoration: lightblue;
-
     }
+    
     .bg-text {
         background-color: rgb(0, 0, 0);
         /* Fallback color */
@@ -84,34 +85,29 @@
         cursor: pointer;
         background-color: rgb(155, 9, 4);
     }
-    
 </style>
 <script type="text/javascript">
     function validate() {
         var Name = document.dr_signup.Name.value;
         var password = document.dr_signup.ID.value;
 
-        if (Name=="")
-        {
+        if (Name == "") {
             document.getElementById('Name').innerHTML = "Please Enter your Name";
-            return(false);
-        }else{
+            return (false);
+        } else {
             document.getElementById('Name').innerHTML = " ";
         }
 
-        if(password =="")
-        {
+        if (password == "") {
             document.getElementById('password').innerHTML = "Please Enter Your Doctor ID"
-            return(false)
-        }
-        else
-        {
+            return (false)
+        } else {
             document.getElementById('password').innerHTML = " "
         }
 
-        return(true);
+        return (true);
 
-        
+
     }
 </script>
 </head>
@@ -135,10 +131,14 @@
 
             <button type="submit">Signup</button><br><br>
 
+
             <div>
                 <p>Already have an account? <a href="../FrontEnd/login.html" style="text-decoration: none; color: lightskyblue;" >Log in</a></p>
             </div><br>
             <p class="back"> <a href="../index.html" style="text-decoration: none; color: blueviolet;">Go Back</a></p>
+
+            <p class="back"> <a href="../index.html">Go Back</a></p>
+
         </form>
     </div>
 

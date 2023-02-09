@@ -1,22 +1,30 @@
 <?php
+     $con= mysqli_connect("localhost","root","","hospital");
 
-$conn = mysqli_connect('localhost:8080','root','','hospital') or die('connection failed');
 
-$card_holder=$_POST['card_holder'];
-$card_number =$_POST['credit_card_number'];
-$exp_date =$_POST['exp_date'];
-$cvc =$_POST['cvc'];
- 
-   
-   if(isset($_POST['submit'])){
-$insert = mysqli_query($conn, "INSERT INTO `payment_table`(card_holder, card_number, exp_date, cvc) VALUES('card_holder','$card_number','$exp_date','$cvc')") or die('query failed');
- 
+     if(!$con){
 
-   if($insert){
-      $message[] = 'payment made successfully!';
-   }else{
-      $message[] = 'payment failed';
-   }
+          die("Could not connect".mysqli_connect_error());
 
-}
+     }else{
+          echo 'Connection  Established Successfully';
+          echo nl2br ("\n");
+
+          $sql="INSERT INTO payment_table(card_holder, card_number, exp_date, cvc)
+          VALUES
+          ('$_POST[card_holder]',
+          '$_POST[card_number]',
+          '$_POST[exp_date]',
+          $_POST[cvc]',
+          )";
+     }
+
+     if(!mysqli_query($con,$sql)){
+
+          die('Error'.mysqli_error($con));
+          
+     }else{
+          echo 'Your payment has been added successfully';
+     }
+     mysqli_close($con);
 ?>

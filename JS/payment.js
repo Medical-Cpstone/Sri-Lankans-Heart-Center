@@ -1,1 +1,1 @@
-$("input[name='expiry-data']").mask("00 / 00");
+$("input[name='expiry_data']").mask("00 / 00");
