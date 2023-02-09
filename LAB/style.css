@@ -5,16 +5,17 @@
     --color-black: #b12b10;
     --color-black-1: #212b38;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color: #3bf1f1;
-    font-family: sans-serif;
 
+body {
+    background-color: #edd3d3;
+    font-family: sans-serif;
 }
 
 .logo {
@@ -55,6 +56,7 @@ body{
     text-decoration: none;
     transition: all 0.3s;
 }
+
 .menu-bar ul li a:hover {
     color: var(--color-primary);
 }
@@ -64,6 +66,7 @@ body{
     margin-left: 10px;
     padding-top: 3px;
 }
+
 .dropdown-menu {
     display: none;
 }
@@ -97,7 +100,8 @@ body{
     top: 0;
     background-color: var(--color-black);
 }
-.container{
+
+.container {
     width: 450px;
     height: auto;
     background-color: #fff;
@@ -105,11 +109,12 @@ body{
     position: absolute;
     top: 85%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
 }
-.box{
+
+.box {
     width: 400px;
     height: auto;
     display: flex;
@@ -117,16 +122,19 @@ body{
     justify-content: center;
     align-items: center;
 }
-h3{
+
+h3 {
     font-size: 35px;
     margin: 15px;
 }
-.name{
+
+.name {
     width: 100%;
     position: relative;
     margin-bottom: 15px;
 }
-.name i{
+
+.name i {
     position: absolute;
     top: 50%;
     left: 30px;
@@ -134,7 +142,8 @@ h3{
     font-size: 20px;
     color: #bbb;
 }
-.name input{
+
+.name input {
     width: 100%;
     padding: 20px 60px;
     border: none;
@@ -143,69 +152,79 @@ h3{
     background-color: #eee;
     border-radius: 40px;
 }
-.name input::placeholder{
-    color: #bbb;
-    font-weight: 500;
-}
-.email{
-    width: 100%;
-    position: relative;
-    margin-bottom: 15px;
-}
-.email i{
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #bbb;
-}
-.email input{
-    width: 100%;
-    padding: 20px 60px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    background-color: #eee;
-    border-radius: 40px;
-}
-.email input::placeholder{
-    color: #bbb;
-    font-weight: 500;
-}
-.message-box{
-    width: 100%;
-    position: relative;
-    margin-bottom: 15px;
-}
-.message-box i{
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #bbb;
-}
-.message-box textarea{
-    width: 100%;
-    padding: 20px 60px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    background-color: #eee;
-    border-radius: 40px;
-}
-.message-box textarea::placeholder{
+
+.name input::placeholder {
     color: #bbb;
     font-weight: 500;
 }
 
-.button{
+.email {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.email i {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+
+.email input {
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+
+.email input::placeholder {
+    color: #bbb;
+    font-weight: 500;
+}
+
+.message-box {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.message-box i {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+
+.message-box textarea {
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+
+.message-box textarea::placeholder {
+    color: #bbb;
+    font-weight: 500;
+}
+
+.button {
     width: 100%;
     cursor: pointer;
     margin-bottom: 20px;
 }
-.button button{
+
+.button button {
     width: 100%;
     padding: 10px;
     font-size: 20px;
@@ -216,21 +235,24 @@ h3{
     border-radius: 40px;
     cursor: pointer;
 }
-.message{
+
+.message {
     width: 100%;
     position: relative;
     margin-bottom: 60px;
     display: flex;
     justify-content: center;
 }
-.message .success{
+
+.message .success {
     font-size: 20px;
     color: green;
     position: absolute;
     animation: buttons .3s linear;
     display: none;
 }
-.message .danger{
+
+.message .danger {
     font-size: 20px;
     color: red;
     position: absolute;
@@ -238,14 +260,15 @@ h3{
     animation: buttons .3s linear;
     display: none;
 }
-@keyframes buttons{
-    0%{
+
+@keyframes buttons {
+    0% {
         transform: scale(0.1);
     }
-    50%{
+    50% {
         transform: scale(0.5);
     }
-    100%{
+    100% {
         transform: scale(1);
     }
 }
