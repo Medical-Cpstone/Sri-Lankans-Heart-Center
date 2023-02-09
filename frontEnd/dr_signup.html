@@ -130,15 +130,15 @@
             <span id="Name" style="color:red"></span><br>
 
             <p>Doctor ID:</p>
-            <input type="password" id="doctor_id" name="ID" placeholder="xxxx"><br>
+            <input type="password" id="doctor_id" name="ID" placeholder="0000"><br>
             <span id="password" style="color:red"></span><br>
 
             <button type="submit">Signup</button><br><br>
 
             <div>
-                <p>Already have an account? <a href="../FrontEnd/login.html">Log in</a></p>
+                <p>Already have an account? <a href="../FrontEnd/login.html" style="text-decoration: none; color: lightskyblue;" >Log in</a></p>
             </div><br>
-            <p class="back"> <a href="../index.html">Go Back</a></p>
+            <p class="back"> <a href="../index.html" style="text-decoration: none; color: blueviolet;">Go Back</a></p>
         </form>
     </div>
 
@@ -146,49 +146,3 @@
 </body>
 
 </html>
-<!---    function validate(){
-
-        if (document.dr_signup.Name.value.trim == "")
-        {
-            alert("Please enter your name!");
-            document.dr_signup.Name.focus();
-            return false;
-        }
-        if (document.dr_signup.ID.value.trim == "")
-        {
-            alert("Please enter your 4 digit Doctor ID!");
-            document.dr_signup.ID.focus();
-            return false;
-        }
-        var myInput = document.getElementById("doctor_id");
-        var number = document.getElementById("number");
-        var length = document.getElementById("length");
-        {
-          var numbers = /[0-9]/g;
-          if(myInput.value.match(numbers)) {
-            number.classList.remove("invalid");
-            number.classList.add("valid");
-          } else {
-            number.classList.remove("valid");
-            number.classList.add("invalid");
-          }
-          // Validate length
-         if(myInput.value.length >= 8) {
-          length.classList.remove("invalid");
-          length.classList.add("valid");
-        } else {
-          length.classList.remove("valid");
-          length.classList.add("invalid");
-        }
-        }
-        function myFunction() {
-    var x = document.getElementById("doctor_id");
-
-    if (x.type === "password") {
-        x.type = "text";
-    }
-    else {
-        x.type = "password";
-    }
-}
--->

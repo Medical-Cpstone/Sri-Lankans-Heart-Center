@@ -32,6 +32,7 @@
           die('Error'.$mysqli_error());
      }else{
           echo 'your record added successfully';
+          echo 'doctor.html';
      }
      mysqli_close($con);
 ?>
