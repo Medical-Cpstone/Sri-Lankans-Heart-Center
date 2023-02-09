@@ -1,5 +1,5 @@
 <?php
-     $con= mysqli_connect("localhost","root","","hospital");
+     $con= mysqli_connect("localhost","root","Zahra@2212","hospital");
 
 
      if(!$con){
@@ -22,6 +22,10 @@
           die('Error'.$mysqli_error());
      }else{
           echo 'your record added successfully';
+          $target = "channel.html";
+          $linkname = "/index.html";
+
+          link($target, $linkname);
      }
      mysqli_close($con);
 ?>
