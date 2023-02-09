@@ -1,9 +1,9 @@
 <?php
-     $con= mysqli_connect("localhost","root","Zahra@2212","hospital");
+     $con= mysqli_connect("localhost","root"," ","hospital");
 
 
      if(!$con){
-          die("Could not connect".mysqli_error());
+          die("Could not connect".mysqli_connect_error());
 
      }else{
           echo 'Connection  Established Successfully';
@@ -22,10 +22,7 @@
           die('Error'.$mysqli_error());
      }else{
           echo 'your record added successfully';
-          $target = "channel.html";
-          $linkname = "/index.html";
-
-          link($target, $linkname);
+          
      }
      mysqli_close($con);
 ?>
