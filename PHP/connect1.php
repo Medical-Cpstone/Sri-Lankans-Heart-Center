@@ -1,8 +1,8 @@
 <?php
-     $con= mysqli_connect("localhost","root","Zahra@2212","hospital");
+     $con= mysqli_connect("localhost:8080","root","Zahra@2212","hospital");
 
      if(!$con){
-          die("Could not connect".mysql_error());
+          die("Could not connect".$mysqli_error());
 
 
      }else{
@@ -18,7 +18,7 @@
      }
 
      if(!mysqli_query($con,$sql)){
-          die('Error'.mysql_error());
+          die('Error'.$mysqli_error());
      }else{
           echo 'your record added successfully';
      }

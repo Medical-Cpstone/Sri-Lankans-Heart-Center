@@ -3,7 +3,10 @@
 
 
      if(!$con){
+
           die("Could not connect".mysqli_connect_error());
+          die("Could not connect".$mysqli_error());
+
 
      }else{
           echo 'Connection  Established Successfully';
@@ -16,7 +19,10 @@
      }
 
      if(!mysqli_query($con,$sql)){
+
           die('Error'.mysqli_error($con));
+          die('Error'.$mysqli_error());
+
      }else{
           echo 'your record added successfully';
      }
