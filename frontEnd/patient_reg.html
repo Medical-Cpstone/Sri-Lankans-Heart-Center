@@ -135,12 +135,8 @@
                 return false;
             }
         }
-        function loadPage(){
-     var theURL = window.FrontEnd/patient_reg.html.reg_form;
-     var newURL = FrontEnd/patient_reg.html.replace("/FrontEnd/", "/index.html/");
-     //Set URL
-     window.location.href = index.html;
-}
+        
+
        
     </script>
 </head>
@@ -148,7 +144,7 @@
 <body>
 
 
-    <form action="/PHP/connect1.php" method="post"  name="reg_form" onsubmit="return validation()">
+    <form action="../PHP/connect3.php" method="post"  name="reg_form" onsubmit="return validation()">
 
         <div class="container">
             <h1>Register</h1>
@@ -158,14 +154,14 @@
             <input type="text" placeholder="Enter First Name" name="f_name" id="f_name">
 
             <label for="username"><b>Last Name :</b></label>
-            <input type="text" placeholder="Enter Last Name" name="l_name" id="l_name" required/>
+            <input type="text" placeholder="Enter Last Name" name="l_name" id="l_name" />
 
             <label for="username"><b>Username :</b></label>
-            <input type="text" placeholder="Enter Username" name="u_name" id="u_name" required/>
+            <input type="text" placeholder="Enter Username" name="u_name" id="u_name" />
 
 
             <label for="username"><b>NIC no :</b></label>
-            <input type="password" placeholder="Enter NIC" name="nic" id="nic" required/>
+            <input type="password" placeholder="Enter NIC" name="nic" id="nic" />
 
 
             <div class="circle-form">
@@ -178,31 +174,31 @@
 
 
             <label for="email"><b>Blood Group :</b></label>
-            <input type="text" placeholder="Enter Blood Group" name="blood_grp" id="blood_grp" required/>
+            <input type="text" placeholder="Enter Blood Group" name="blood_grp" id="blood_grp" />
 
             <label for="email"><b>Birthday :</b></label>
-            <input type="date" placeholder="Enter BOD" name="dob" id="bod" required/>
+            <input type="date" placeholder="Enter BOD" name="dob" id="bod" />
 
 
             <label for="email"><b>Email :</b></label>
-            <input type="text" placeholder="example@mail.com" name="email" id="email" required/>
+            <input type="text" placeholder="example@mail.com" name="email" id="email"/>
 
             <label for="pwd"><b>Password :</b></label>
-            <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required/>
+            <input type="password" placeholder="Enter Password" name="pwd" id="pwd" />
 
             <div>
                 <p id="length "></p>
             </div>
 
-            <label for="pwd-repeat"><b>Confirm Password :</b></label>
-            <input type="password" placeholder="Confirm Password" name="pwd-repeat" id="pwd_repeat" required/>
+            <label for="pwd_repeat"><b>Confirm Password :</b></label>
+            <input type="password" placeholder="Confirm Password" name="pwd_repeat" id="pwd_repeat"/>
 
             <div class="card-box">
                 <span class="details"><b> Phone number :</b> </span>
                 <input type="phone" name="phn_no" placeholder="+94xxxxxxxxxx">
             </div>
 
-            <button type="submit" name="btn" onclick="loadPage()">Signup</a></button>
+            <button type="submit" name="btn">Signup</a></button>
         </div>
         <!-- wrapping the text inside the p tag with a tag for routing to the login page URL-->
         <!-- the # must ideally be replaced by the login page URL -->

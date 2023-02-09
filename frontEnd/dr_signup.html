@@ -88,26 +88,30 @@
 </style>
 <script type="text/javascript">
     function validate() {
-        var password = document.getElementById("Name");
-        var password = document.getElementById("doctor_id");
-        var number = document.getElementById("number");
-        var length = document.getElementById("length");
+        var Name = document.dr_signup.Name.value;
+        var password = document.dr_signup.ID.value;
 
-        if (document.dr_signup.Name.value.trim == "") {
-            alert("Please enter your name!");
-            document.dr_signup.Name.focus();
-            return false;
-        } else {
-            alert("Signup Failed");
+        if (Name=="")
+        {
+            document.getElementById('Name').innerHTML = "Please Enter your Name";
+            return(false);
+        }else{
+            document.getElementById('Name').innerHTML = " ";
         }
 
-        if (password.value.length.trim = 4) {
-            alert("sign up successfully");
-            window.location.replace("/FrontEnd/index.html");
-            return false;
-        } else {
-            alert("Signup Failed");    
+        if(password =="")
+        {
+            document.getElementById('password').innerHTML = "Please Enter Your Doctor ID"
+            return(false)
         }
+        else
+        {
+            document.getElementById('password').innerHTML = " "
+        }
+
+        return(true);
+
+        
     }
 </script>
 </head>
@@ -119,15 +123,15 @@
     <div class="bg-text">
         <h1><b>Doctor Signup</b></h1><br><br>
 
-        <form action="/PHP/connect2.php" method="post" name="dr_signup" onsubmit="return validate()">
+        <form action="../PHP/connect2.php" method="post" name="dr_signup" onsubmit="return validate()">
 
             <p>Doctor Name:</p>
-            <input type="text" id="doctor_name" name="Name" placeholder="" required><br><br>
+            <input type="text" id="doctor_name" name="Name" placeholder=""><br>
+            <span id="Name" style="color:red"></span><br>
 
             <p>Doctor ID:</p>
-            <input type="password" id="doctor_id" name="ID" placeholder="xxxx" required>
-            <p id="number" class="invalid"></p>
-            <p id="length" class="invalid"></p> <br><br>
+            <input type="password" id="doctor_id" name="ID" placeholder="xxxx"><br>
+            <span id="password" style="color:red"></span><br>
 
             <button type="submit">Signup</button><br><br>
 

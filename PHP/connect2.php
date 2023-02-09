@@ -3,7 +3,7 @@
 
 
      if(!$con){
-          die("Could not connect".mysql_error());
+          die("Could not connect".mysqli_connect_error());
 
      }else{
           echo 'Connection  Established Successfully';
@@ -11,12 +11,12 @@
 
           $sql="INSERT INTO dr_signup(doctor_name,doctor_id )
           VALUES
-          ('$_POST[doctor_name]',
-          '$_POST[doctor_id]')";
+          ('$_POST[Name]',
+          '$_POST[ID]')";
      }
 
      if(!mysqli_query($con,$sql)){
-          die('Error'.mysql_error());
+          die('Error'.mysqli_error($con));
      }else{
           echo 'your record added successfully';
      }

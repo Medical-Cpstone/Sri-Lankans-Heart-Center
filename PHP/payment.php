@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost','root','','hospital') or die('connection failed');
+$conn = mysqli_connect('localhost:8080','root','','hospital') or die('connection failed');
 
 $card_holder=$_POST['card_holder'];
 $card_number =$_POST['credit_card_number'];
