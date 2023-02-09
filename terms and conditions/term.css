@@ -63,11 +63,11 @@ body {
     text-transform: uppercase;
 }
 
-.button {
+.btn {
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
 
 .a btn {
@@ -77,17 +77,9 @@ body {
     border-radius: 6px;
     font-size: 19px;
     font-weight: 500;
-    color: #fff;
+    background-color: rgb(245, 68, 68);
     transition: .3s linear;
     cursor: pointer;
-}
-
-.a red-btn {
-    background-color: rgb(245, 68, 68);
-}
-
-.gray-btn {
-    background-color: #282828;
 }
 
 .btn:hover {
