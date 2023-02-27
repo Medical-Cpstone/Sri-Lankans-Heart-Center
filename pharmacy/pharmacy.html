@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pharmacy.css" />
+    <title>pharmacy</title>
+</head>
+<section>
+    <div class="menu-bar">
+        <h1 class="logo">Sri Lankan's <span>Heart Center</span></h1>
+        <ul>
+            <li>
+                <a href="#">Home<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="../FrontEnd/login.html">Login</a></li>
+                        <li><a href="../FrontEnd/diseases.html">Diseases</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../FrontEnd/About_us.html">About Us</a></li>
+            <li>
+                <a href="# ">Services<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="../FrontEnd/doctor.html">Doctors</a></li>
+                        <li><a href="../LAB/index.html">Lab reports</a></li>
+                        <li><a href="/pharmacy/pharmacy.html">Pharmacy</a></li>
+                        <li><a href="../FrontEnd/payment.html">Payments</a></li>
+                        <li><a href="../FrontEnd/channel.html">Channeling</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="../FrontEnd/contact.html">Contact us</a>
+            </li>
+
+            <li>
+                <a href="../FEED_BACK/1.html">Feedback</a>
+            </li>
+
+            <li><a href="../FrontEnd/map.html">Location</a></li>
+            <li>
+                <a href="#">Sign up<i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="../FrontEnd/dr_signup.html">Doctor</a></li>
+                        <li><a href="../FrontEnd/patient_reg.html">Patient</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+</head>
+
+<body>
+    <div class="contact-box">
+        <form action="../pharmacy/add.php" method="post" name="pharmacy_table">
+            <h1>PHARMACY</h1>
+
+            <input type="text " class="input-field" placeholder="User Name " name="username" />
+            <input type="text " class="input-field" name="medicine_name" placeholder="Medicine Name " />
+
+            <button type="submit " class="btn" value="SUBMIT ">
+          Check Availability
+        </button>
+        </form>
+    </div>
+</body>
+
+</html>
