@@ -39,42 +39,6 @@
 
   <!--home section ends-->
 
-  <!-- login section starts  -->
-
-  <section class="services" id="login">
-
-    <h1 class="heading"> Start <span>Here</span> </h1>
-
-    <div class="box-container">
-
-      <div class="box">
-        <i class="fas fa-user"></i>
-        <h3>User Login</h3>
-        <p>Login in order to take the best services from our website.</p>
-        <a href="login.php" class="btn"> login <span class="fas fa-chevron-right"></span> </a>
-      </div>
-
-      <div class="box">
-        <i class="fas fa-stethoscope"></i>
-        <h3>Doctor Login</h3>
-        <p>Login in order to give the best services from our website.</p>
-        <a href="login.php" class="btn"> login <span class="fas fa-chevron-right"></span> </a>
-      </div>
-
-
-      <div class="box">
-        <i class="fas fa-lock"></i>
-        <h3>Admin Login</h3>
-        <p>Only for the admins of the hospital to maintain the website.</p>
-        <a href="login.php" class="btn"> login <span class="fas fa-chevron-right"></span> </a>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- login section ends -->
-
   <!-- about section starts  -->
 
   <section class="about" id="about">
@@ -90,7 +54,8 @@
           Users must log in to website, who do not have an account, should signup/register. Users log in as a doctor
           or a patient.
           <br><br>
-          If someone signup as a patient they should give their details like, name, age, problem (particular disease),
+          If someone signup as a patient they should give their details like, name, age, problem (particular
+          disease),
           phone no, guardian name and guardians phone no etc. The doctor and patient have two
           different login systems patient can login by giving their username and password, doctor can login by givin
           their name, and doctor ID.
