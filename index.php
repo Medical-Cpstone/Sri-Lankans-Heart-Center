@@ -22,9 +22,8 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#appointment">Appointment</a>
-      <a href="#review">Review</a>
       <a href="#location">Location</a>
-      <a href="#login">Login</a>
+      <a href="./PAGES/login.php">Login</a>
     </nav>
     <div id="menu-btn" class="fa fa-bars"></div>
   </header>
@@ -33,7 +32,7 @@
   <!--home section starts-->
   <section class="home" id="home">
   </section>
-  <div class="image">
+  <div class="images">
     <img src="./IMAGES/cover.jpg" alt="">
   </div>
 
