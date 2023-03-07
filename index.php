@@ -23,7 +23,7 @@
       <a href="#services">Heart diseases</a>
       <a href="#location">Location</a>
       <a href="#login">Login</a>
-      <a href="#register">Register</a>
+      <a href="signup.php">Register</a>
     </nav>
     <div id="menu-btn" class="fa fa-bars"></div>
   </header>
@@ -255,16 +255,16 @@
         <h3>quick links</h3>
         <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
         <a href="about.php"> <i class="fas fa-chevron-right"></i> about </a>
-        <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
-        <a href="#location"> <i class="fas fa-chevron-right"></i> doctors </a>
+        <a href="#services"> <i class="fas fa-chevron-right"></i> heart diseases </a>
+        <a href="#location"> <i class="fas fa-chevron-right"></i> location </a>
       </div>
 
       <div class="box">
         <h3>our services</h3>
-        <a href="diseases.php"> <i class="fas fa-chevron-right"></i> heart diseases </a>
-        <a href="#"> <i class="fas fa-chevron-right"></i> message us </a>
-        <a href="#"> <i class="fas fa-chevron-right"></i> Appointments </a>
-        <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+        <a href="#login"> <i class="fas fa-chevron-right"></i> doctors </a>
+        <a href="mailto:srihrtcntr@gmail.com"> <i class="fas fa-chevron-right"></i> message us </a>
+        <a href="#login"> <i class="fas fa-chevron-right"></i> Appointments </a>
+        <a href="tel:+9485 6890284"> <i class="fas fa-chevron-right"></i> ambulance service </a>
       </div>
 
       <div class="box">
