@@ -30,11 +30,11 @@
   <!--header section ends-->
 
   <!--home section starts-->
-  <section class="home" id="home">
-    <div class="image">
-      <img src="./IMAGES/cover.jpg" alt="">
-    </div>
-  </section>
+
+  <div class="image">
+    <img src="./IMAGES/cover.jpg" alt="">
+  </div>
+
   <!--home section ends-->
 
   <!-- login section starts  -->
@@ -254,7 +254,7 @@
         <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
         <a href="about.php"> <i class="fas fa-chevron-right"></i> about </a>
         <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
-        <a href="#doctors"> <i class="fas fa-chevron-right"></i> doctors </a>
+        <a href="#location"> <i class="fas fa-chevron-right"></i> doctors </a>
       </div>
 
       <div class="box">

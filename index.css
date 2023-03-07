@@ -126,20 +126,8 @@ section:nth-child(even) {
     display: none;
 }
 
-.home {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding-top: 10rem;
-}
-
-.home .image {
-    flex: 1 1 45rem;
-}
-
-.home .image img {
-    height: 105vh;
+.image img {
+    height: 99vh;
     width: 100%;
 }
 
