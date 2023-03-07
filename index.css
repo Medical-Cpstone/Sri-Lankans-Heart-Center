@@ -127,8 +127,60 @@ section:nth-child(even) {
 }
 
 .image img {
-    height: 99vh;
+    height: 95.6vh;
     width: 100%;
+}
+
+.content {
+    flex: 1 1 45rem;
+}
+
+.content h3 {
+    font-size: 30px;
+    color: var(--black);
+    line-height: 1.8;
+    text-shadow: var(--text-shadow);
+}
+
+.content p {
+    font-size: 15px;
+    color: var(--light-color);
+    line-height: 1.8;
+    padding: 20px 0;
+}
+
+.icons-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.icons-container .icons i {
+    font-size: 4.5rem;
+    color: var(--green);
+    padding-bottom: .7rem;
+}
+
+.icons-container .icons h3 {
+    font-size: 4.5rem;
+    color: var(--black);
+    padding: .5rem 0;
+    text-shadow: var(--text-shadow);
+}
+
+.icons-container .icons p {
+    font-size: 1.7rem;
+    color: var(--light-color);
 }
 
 .about .row {
@@ -143,11 +195,7 @@ section:nth-child(even) {
 }
 
 .about .row .image img {
-    width: 100%;
-}
-
-.image img {
-    height: 80vh;
+    height: 2%;
     width: 100%;
 }
 
@@ -199,6 +247,62 @@ section:nth-child(even) {
     color: var(--light-color);
     font-size: 1.4rem;
     line-height: 2;
+}
+
+.appointment .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.appointment .row .image {
+    flex: 1 1 45rem;
+}
+
+.appointment .row .image img {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+}
+
+.appointment .row form {
+    flex: 1 1 45rem;
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.appointment .row form .message {
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    padding: 1.5rem 1rem;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.appointment .row form h3 {
+    color: var(--black);
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.appointment .row form .box {
+    width: 100%;
+    margin: .7rem 0;
+    border-radius: .5rem;
+    border: var(--border);
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    padding: 1rem;
+}
+
+.appointment .row form .btn {
+    padding: 1rem 4rem;
 }
 
 .location {

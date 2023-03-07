@@ -31,6 +31,8 @@
 
   <!--home section starts-->
 
+  <section class="home" id="home">
+  </section>
   <div class="image">
     <img src="./IMAGES/cover.jpg" alt="">
   </div>
