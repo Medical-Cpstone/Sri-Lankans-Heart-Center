@@ -21,13 +21,6 @@ session_start();
 $_SESSION["user"]="";
 $_SESSION["usertype"]="";
 
-// Set the new timezone
-date_default_timezone_set('Asia/Colombo');
-$date = date('Y-m-d');
-
-$_SESSION["date"]=$date;
-
-
 if($_POST){
 
     
