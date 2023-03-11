@@ -21,7 +21,6 @@
 <body>
     <?php
 
-    //learn from w3schools.com
 
     session_start();
 
@@ -34,9 +33,6 @@
         header("location: ../login.php");
     }
     
-    
-
-    //import database
     include("../connection.php");
 
     
