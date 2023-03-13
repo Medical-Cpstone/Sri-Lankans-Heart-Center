@@ -143,7 +143,7 @@ body {
     transition: all 0.3s;
     border-radius: 5px;
     background-color: #f0f0f073;
-    border: 1px solid rgba(57, 108, 240, 0.1);
+    border: 1px solid rgba(240, 145, 57, 0.1);
     font-family: 'Inter', sans-serif;
 }
 
@@ -239,18 +239,6 @@ body {
     }
 }
 
-input[type=search] {
-    background-image: url('../img/search.svg');
-    background-position: 10px 50%;
-    background-repeat: no-repeat;
-    transition: 0.5s;
-    padding: 8px 20px 8px 40px;
-}
-
-input[type=search]:focus {
-    transition: 0.5s;
-}
-
 .box {
     width: 120px;
     height: 30px;
@@ -276,7 +264,7 @@ input[type=search]:focus {
 }
 
 .btn-primary-gray:hover {
-    background-color: #5185ffa9;
+    background-color: #ff9751a9;
     box-shadow: 0 3px 5px 0 rgba(120, 115, 111, 0.3);
 }
 

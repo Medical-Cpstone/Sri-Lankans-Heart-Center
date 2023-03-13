@@ -34,7 +34,7 @@
   <section class="home" id="home">
   </section>
   <div class="image">
-    <img src="./IMAGES/cover.jpg" alt="">
+    <img src="./img/cover.jpg" alt="">
   </div>
 
   <!--home section ends-->
@@ -80,7 +80,7 @@
     <h1 class="heading"> <span>about</span> us </h1>
     <div class="row">
       <div class="image">
-        <img src="./IMAGES/img2.jpg" alt="">
+        <img src="./img/img2.jpg" alt="">
       </div>
       <div class="content">
         <h3>Sri Lankan's Heart Center The Best Heart Center,</h3>

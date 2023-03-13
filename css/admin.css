@@ -23,7 +23,7 @@
 
 .profile-title {
     font-weight: 500;
-    color: #161c2d;
+    color: #2d2116;
     font-size: 22px;
     margin: 0;
     text-align: left;
@@ -32,7 +32,7 @@
 
 .profile-subtitle {
     font-weight: 300;
-    color: #8492a6;
+    color: #a69784;
     font-size: 15px;
     margin: 0;
     text-align: left;
@@ -52,42 +52,6 @@
     /*box-shadow: 0 0 3px rgba(52,58,64,0.08);*/
     text-align: center;
 }
-
-
-/*.menu-items1{
-    font-weight: 500;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    color: #161c2def;
-    
-}
-
-.menu-td1{
-    padding-right: 10px;
-}
-
-
-.menu-button:hover{
-    cursor: pointer;
-    background-color:var(--btnice);
-}
-
-.menu-active{
-    color:var(--btnnicetext);
-    
-}
-
-.menu-items1-active{
-    color:var(--btnnicetext);
-    background-image: url('../img/search.svg');
-    background-position: 10px 50%;
-    background-repeat: no-repeat;
-}
-
-
-
-*/
 
 .heading-main12 {
     font-weight: 500;
