@@ -20,21 +20,21 @@
     <nav class="navbar">
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#appointment">Appointment</a>
-      <a href="#review">Review</a>
+      <a href="#services">Heart diseases</a>
       <a href="#location">Location</a>
       <a href="#login">Login</a>
+      <a href="signup.php">Register</a>
     </nav>
     <div id="menu-btn" class="fa fa-bars"></div>
   </header>
   <!--header section ends-->
 
   <!--home section starts-->
+
   <section class="home" id="home">
   </section>
   <div class="image">
-    <img src="./IMAGES/cover.jpg" alt="">
+    <img src="./img/cover.jpg" alt="">
   </div>
 
   <!--home section ends-->
@@ -57,10 +57,9 @@
       <div class="box">
         <i class="fas fa-stethoscope"></i>
         <h3>Doctor Login</h3>
-        <p>Login in order to give the best services from our website.</p>
+        <p>Only for the doctors to give their best services.</p>
         <a href="login.php" class="btn"> login <span class="fas fa-chevron-right"></span> </a>
       </div>
-
 
       <div class="box">
         <i class="fas fa-lock"></i>
@@ -81,7 +80,7 @@
     <h1 class="heading"> <span>about</span> us </h1>
     <div class="row">
       <div class="image">
-        <img src="./IMAGES/img2.jpg" alt="">
+        <img src="./img/img2.jpg" alt="">
       </div>
       <div class="content">
         <h3>Sri Lankan's Heart Center The Best Heart Center,</h3>
@@ -90,7 +89,8 @@
           Users must log in to website, who do not have an account, should signup/register. Users log in as a doctor
           or a patient.
           <br><br>
-          If someone signup as a patient they should give their details like, name, age, problem (particular disease),
+          If someone signup as a patient they should give their details like, name, age, problem (particular
+          disease),
           phone no, guardian name and guardians phone no etc. The doctor and patient have two
           different login systems patient can login by giving their username and password, doctor can login by givin
           their name, and doctor ID.
@@ -114,44 +114,114 @@
   <!-- services section starts  -->
 
   <section class="services" id="services">
-
-    <h1 class="heading"> our <span>services</span> </h1>
-
+    <h1 class="heading"> Heart <span>diseases</span> </h1>
     <div class="box-container">
 
       <div class="box">
-        <i class="fas fa-notes-medical"></i>
-        <h3>free checkups</h3>
-        <p>Check up your health condition ones a month to stay safe.</p>
-        <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Abnormal heart rhythms, or arrhythmias</h3>
+        <p> An arrhythmia is an abnormality of the heart's rhythm. It may beat too slowly, too quickly, or
+          irregularly. These abnormalities range from a minor inconvenience or discomfort to a potentially fatal
+          problem.</p>
       </div>
-
       <div class="box">
-        <i class="fas fa-ambulance"></i>
-        <h3>24/7 ambulance</h3>
-        <p>Call us on emergencies to protect our loved ones.</p>
-        <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Aorta disease and Marfan syndrome</h3>
+        <p>Some complications of Marfan syndrome can be very serious, like an aneurysm (bulge) of the aorta, the main
+          artery that takes blood away from the heart. An aortic aneurysm can cause the walls of the aorta to tear
+          apart (dissect) and blood to leak in the
+          space created by the tear.</p>
       </div>
-
       <div class="box">
-        <i class="fas fa-user-md"></i>
-        <h3>doctors</h3>
-        <p>Meet our doctors to get the best services.</p>
-        <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Congenital heart disease</h3>
+        <p>CHDs are present at birth and can affect the structure of a baby's heart and the way it works. They can
+          affect how blood flows through the heart and out to the rest of the body. CHDs can vary from mild (such as
+          a small hole in the heart) to severe (such
+          as missing or poorly formed parts of the heart).</p>
       </div>
-
       <div class="box">
-        <i class="fas fa-pills"></i>
-        <h3>medicines</h3>
-        <p>Check the medicine availability and save your time.</p>
-        <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Coronary artery disease (narrowing of the arteries)</h3>
+        <p>Coronary artery disease is caused by plaque buildup in the wall of the arteries that supply blood to the
+          heart.Plaque is made up of cholesterol deposits. Plaque buildup causes the inside of the arteries to
+          narrow over time. This process is called atherosclerosis.</p>
       </div>
-
       <div class="box">
-        <i class="fas fa-disease"></i>
-        <h3>heart diseases</h3>
-        <p>Find about heart diseases and be aware.</p>
-        <a href="./PAGES/diseases.php" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Deep vein thrombosis and pulmonary embolism</h3>
+        <p>Deep vein thrombosis (DVT) is a condition in which a blood clot develops in the deep veins, most commonly
+          in the lower extremities. A pulmonary embolism occurs when a part of the clot breaks off and travels to
+          the lungs, a potential life threat.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Heart attack</h3>
+        <p>A heart attack, also called a myocardial infarction, happens when a part of the heart muscle doesn't get
+          enough blood. The more time that passes without treatment to restore blood flow, the greater the damage to
+          the heart muscle.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Valve disease</h3>
+        <p>What is valvular heart disease? Valvular heart disease is when any valve in the heart has damage or is
+          diseased. There are several causes of valve disease. The normal heart has four chambers (right and left
+          atria, and right and left ventricles) and four valves</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Heart muscle disease (cardiomyopathy)</h3>
+        <p>The most common cause is coronary artery disease or heart attack. However, it can also be caused by
+          genetic changes. Hypertrophic cardiomyopathy. This type involves abnormal thickening of the heart muscle,
+          which makes it harder for the heart to work.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Heart valve disease</h3>
+        <p>In heart valve disease, one or more of the valves in your heart doesn't work properly. Your heart has four
+          valves that keep blood flowing in the correct direction. In some cases, one or more of the valves don't
+          open or close properly. This can cause the blood flow through your heart to your body to be disrupted.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Pericardial disease</h3>
+        <p>Pericardial effusion is the buildup of too much fluid in the double-layered, saclike structure around the
+          heart (pericardium). The space between these layers typically contains a thin layer of fluid.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Peripheral vascular disease</h3>
+        <p>Peripheral vascular disease (PVD) is a slow and progressive circulation disorder. Narrowing, blockage, or
+          spasms in a blood vessel can cause PVD. PVD may affect any blood vessel outside of the heart including the
+          arteries, veins, or lymphatic vessels.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Rheumatic heart disease</h3>
+        <p>Rheumatic heart disease is a condition in which the heart valves have been permanently damaged by
+          rheumatic fever. Rheumatic fever is an inflammatory disease that can affect many connective tissues,
+          especially in the heart. Untreated or under-treated strep infections put a person at increased risk.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Stroke</h3>
+        <p>A stroke, sometimes called a brain attack, occurs when something blocks blood supply to part of the brain
+          or when a blood vessel in the brain bursts. In either case, parts of the brain become damaged or die. A
+          stroke can cause lasting brain damage, long-term disability, or even death.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>Vascular disease (blood vessel disease)</h3>
+        <p>Vascular disease (vasculopathy) affects the blood vessels that carry oxygen and nutrients throughout your
+          body and remove waste from your tissues. Common vascular problems happen because plaque (made of fat and
+          cholesterol) slows down or blocks blood flow inside your arteries or veins.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-pencil-square" aria-hidden="true"></i>
+        <h3>High blood pressure</h3>
+        <p>High blood pressure, also called hypertension, is blood pressure that is higher than normal. Your blood
+          pressure changes throughout the day based on your activities. Having blood pressure measures consistently
+          above normal may result in a diagnosis of high blood pressure (or hypertension).</p>
       </div>
 
     </div>
@@ -159,40 +229,6 @@
   </section>
 
   <!-- services section ends -->
-
-  <!-- appointment section starts   -->
-
-  <section class="appointment" id="appointment">
-    <h1 class="heading"> <span>appointment</span> now </h1>
-
-    <div class="row">
-
-      <div class="image">
-        <img src="./IMAGES/img1.jpg" alt="">
-      </div>
-
-      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-        <?php
-            if(isset($message)) {
-                foreach($message as $message) {
-                echo'<p class ="message">'.$message.'</p>';
-            }
-            }
-        ?>
-
-        <h3>Make An Appointment</h3>
-        <input type="text" name="name" placeholder="your name" class="box">
-        <input type="number" name="number" placeholder="your number" class="box">
-        <input type="email" name="email" placeholder="your email" class="box">
-        <input type="date" name="date" class="box">
-        <input type="submit" name="submit" value="appointment now" class="btn">
-      </form>
-
-    </div>
-
-  </section>
-
-  <!-- appointment section ends -->
 
   <!--location section starts here-->
   <center>
@@ -219,16 +255,16 @@
         <h3>quick links</h3>
         <a href="#home"> <i class="fas fa-chevron-right"></i> home </a>
         <a href="about.php"> <i class="fas fa-chevron-right"></i> about </a>
-        <a href="#services"> <i class="fas fa-chevron-right"></i> services </a>
-        <a href="#doctors"> <i class="fas fa-chevron-right"></i> doctors </a>
+        <a href="#services"> <i class="fas fa-chevron-right"></i> heart diseases </a>
+        <a href="#location"> <i class="fas fa-chevron-right"></i> location </a>
       </div>
 
       <div class="box">
         <h3>our services</h3>
-        <a href="diseases.php"> <i class="fas fa-chevron-right"></i> heart diseases </a>
-        <a href="#"> <i class="fas fa-chevron-right"></i> message us </a>
-        <a href="#"> <i class="fas fa-chevron-right"></i> Appointments </a>
-        <a href="#"> <i class="fas fa-chevron-right"></i> ambulance service </a>
+        <a href="#login"> <i class="fas fa-chevron-right"></i> doctors </a>
+        <a href="mailto:srihrtcntr@gmail.com"> <i class="fas fa-chevron-right"></i> message us </a>
+        <a href="#login"> <i class="fas fa-chevron-right"></i> Appointments </a>
+        <a href="tel:+9485 6890284"> <i class="fas fa-chevron-right"></i> ambulance service </a>
       </div>
 
       <div class="box">

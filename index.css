@@ -195,11 +195,7 @@ section:nth-child(even) {
 }
 
 .about .row .image img {
-    width: 100%;
-}
-
-.image img {
-    height: 80vh;
+    height: 2%;
     width: 100%;
 }
 
