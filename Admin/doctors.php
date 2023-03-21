@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/animations.css">  
-    <link rel="stylesheet" href="../css/main.css">  
-    <link rel="stylesheet" href="../css/admin.css">
-        
-    <title>Doctors</title>
-    <style>
-        .popup{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-        .sub-table{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <title>Doctors</title>
+  <style>
+  .popup {
+    animation: transitionIn-Y-bottom 0.5s;
+  }
+
+  .sub-table {
+    animation: transitionIn-Y-bottom 0.5s;
+  }
+  </style>
 </head>
+
 <body>
-    <?php
+  <?php
     
     session_start();
 
@@ -32,78 +35,98 @@
         header("location: ../login.php");
     }
     
-    
-
     //import database
     include("../connection.php");
 
     
     ?>
-    <div class="container">
-        <div class="menu">
-            <table class="menu-container" border="0">
-                <tr>
-                    <td style="padding:10px" colspan="2">
-                        <table border="0" class="profile-container">
-                            <tr>
-                                <td width="30%" style="padding-left:20px" >
-                                    <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
-                                </td>
-                                <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
-                    </table>
-                    </td>
-                
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-dashbord" >
-                        <a href="index.php" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div></a>
-                    </td>
-                </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor menu-active menu-icon-doctor-active">
-                        <a href="doctors.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Doctors</p></a></div>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-schedule">
-                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
-                    </td>
-                </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-appoinment">
-                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-patient">
-                        <a href="patient.php" class="non-style-link-menu"><div><p class="menu-text">Patients</p></a></div>
-                    </td>
-                </tr>
-
+  <div class="container">
+    <div class="menu">
+      <table class="menu-container" border="0">
+        <tr>
+          <td style="padding:10px" colspan="2">
+            <table border="0" class="profile-container">
+              <tr>
+                <td width="30%" style="padding-left:20px">
+                  <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
+                </td>
+                <td style="padding:0px;margin:0px;">
+                  <p class="profile-title">Administrator</p>
+                  <p class="profile-subtitle">admin@gmail.com</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <a href="../logout.php"><input type="button" value="Log out"
+                      class="logout-btn btn-primary-soft btn"></a>
+                </td>
+              </tr>
             </table>
-        </div>
-        <div class="dash-body">
-            <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
-                <tr >
-                    <td width="13%">
-                        <a href="doctors.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
-                    </td>
-                    <td>
-                        
-                        <form action="" method="post" class="header-search">
+          </td>
 
-                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email" list="doctors">&nbsp;&nbsp;
-                            
-                            <?php
+        </tr>
+        <tr class="menu-row">
+          <td class="menu-btn menu-icon-dashbord">
+            <a href="index.php" class="non-style-link-menu">
+              <div>
+                <p class="menu-text">Dashboard</p>
+            </a>
+    </div></a>
+    </td>
+    </tr>
+    <tr class="menu-row">
+      <td class="menu-btn menu-icon-doctor menu-active menu-icon-doctor-active">
+        <a href="doctors.php" class="non-style-link-menu non-style-link-menu-active">
+          <div>
+            <p class="menu-text">Doctors</p>
+        </a>
+  </div>
+  </td>
+  </tr>
+  <tr class="menu-row">
+    <td class="menu-btn menu-icon-schedule">
+      <a href="schedule.php" class="non-style-link-menu">
+        <div>
+          <p class="menu-text">Schedule</p>
+        </div>
+      </a>
+    </td>
+  </tr>
+  <tr class="menu-row">
+    <td class="menu-btn menu-icon-appoinment">
+      <a href="appointment.php" class="non-style-link-menu">
+        <div>
+          <p class="menu-text">Appointment</p>
+      </a></div>
+    </td>
+  </tr>
+  <tr class="menu-row">
+    <td class="menu-btn menu-icon-patient">
+      <a href="patient.php" class="non-style-link-menu">
+        <div>
+          <p class="menu-text">Patients</p>
+      </a></div>
+    </td>
+  </tr>
+
+  </table>
+  </div>
+  <div class="dash-body">
+    <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
+      <tr>
+        <td width="13%">
+          <a href="doctors.php"><button class="login-btn btn-primary-soft btn btn-icon-back"
+              style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px">
+              <font class="tn-in-text">Back</font>
+            </button></a>
+        </td>
+        <td>
+          <form action="" method="post" class="header-search">
+
+            <input type="search" name="search" class="input-text header-searchbar"
+              placeholder="Search Doctor name or Email" list="doctors">&nbsp;&nbsp;
+
+            <?php
                                 echo '<datalist id="doctors">';
                                 $list11 = $database->query("select  docname,docemail from  doctor;");
 
@@ -117,48 +140,32 @@
 
                             echo ' </datalist>';
 ?>
-                            
-                       
-                            <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
-                        
-                        </form>
-                        
-                    </td>
-                    <td width="15%">
-                        <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
-                        </p>
-                        <p class="heading-sub12" style="padding: 0;margin: 0;">
-                            <?php 
-                        date_default_timezone_set('Asia/Kolkata');
+            <input type="Submit" value="Search" class="login-btn btn-primary btn"
+              style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
 
-                        $date = date('Y-m-d');
-                        echo $date;
-                        ?>
-                        </p>
-                    </td>
-                    <td width="10%">
-                        <button  class="btn-label"  style="display: flex;justify-content: center;align-items: center;"><img src="../img/calendar.svg" width="100%"></button>
-                    </td>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="padding-top:30px;">
+          <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Add New Doctor</p>
+        </td>
+        <td colspan="2">
+          <a href="?action=add&id=none&error=0" class="non-style-link"><button
+              class="login-btn btn-primary btn button-icon"
+              style="display: flex;justify-content: center;align-items: center;background-image: url('../img/icons/add.svg');">Add
+              New</font></button>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" style="padding-top:10px;">
+          <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Doctors
+            <?php echo $list11->num_rows; ?></p>
+        </td>
 
-
-                </tr>
-               
-                <tr >
-                    <td colspan="2" style="padding-top:30px;">
-                        <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Add New Doctor</p>
-                    </td>
-                    <td colspan="2">
-                        <a href="?action=add&id=none&error=0" class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style="display: flex;justify-content: center;align-items: center;margin-left:75px;background-image: url('../img/icons/add.svg');">Add New</font></button>
-                            </a></td>
-                </tr>
-                <tr>
-                    <td colspan="4" style="padding-top:10px;">
-                        <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Doctors (<?php echo $list11->num_rows; ?>)</p>
-                    </td>
-                    
-                </tr>
-                <?php
+      </tr>
+      <?php
                     if($_POST){
                         $keyword=$_POST["search"];
                         
@@ -168,36 +175,32 @@
 
                     }
 
-
-
                 ?>
-                  
-                <tr>
-                   <td colspan="4">
-                       <center>
-                        <div class="abc scroll">
-                        <table width="93%" class="sub-table scrolldown" border="0">
-                        <thead>
-                        <tr>
-                                <th class="table-headin">
-                                Doctor Name
-                                
-                                </th>
-                                <th class="table-headin">
-                                    Email
-                                </th>
-                                <th class="table-headin">
-                                    Specialties
-                                    
-                                </th>
-                                <th class="table-headin">
-                                    Events
-                                    
-                                </tr>
-                        </thead>
-                        <tbody>
-                        
-                            <?php
+
+      <tr>
+        <td colspan="4">
+          <center>
+            <div class="abc scroll">
+              <table width="93%" class="sub-table scrolldown" border="0">
+                <thead>
+                  <tr>
+                    <th class="table-headin">
+                      Doctor Name
+                    </th>
+                    <th class="table-headin">
+                      Email
+                    </th>
+                    <th class="table-headin">
+                      Specialties
+                    </th>
+                    <th class="table-headin">
+                      Events
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <?php
 
                                 $result= $database->query($sqlmain);
 
@@ -229,16 +232,15 @@
                                     $spcil_array= $spcil_res->fetch_assoc();
                                     $spcil_name=$spcil_array["sname"];
                                     echo '<tr>
-                                        <td> &nbsp;'.
+                                        <td style="text-align:center;"> &nbsp;'.
                                         substr($name,0,30)
                                         .'</td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($email,0,20).'
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                             '.substr($spcil_name,0,20).'
                                         </td>
-
                                         <td>
                                         <div style="display:flex;justify-content: center;">
                                         <a href="?action=edit&id='.$docid.'&error=0" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-edit"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Edit</font></button></a>
@@ -254,21 +256,18 @@
                             }
                                  
                             ?>
- 
-                            </tbody>
+                </tbody>
 
-                        </table>
-                        </div>
-                        </center>
-                   </td> 
-                </tr>
-                       
-                        
-                        
-            </table>
-        </div>
-    </div>
-    <?php 
+              </table>
+            </div>
+          </center>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+  </div>
+  <?php 
     if($_GET){
         
         $id=$_GET["id"];
@@ -282,13 +281,11 @@
                         <h2>Are you sure?</h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br>('.substr($nameget,0,40).').
-                            
+                            You want to delete '.substr($nameget,0,40).'                          
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
-
                         </div>
                     </center>
             </div>
@@ -314,20 +311,17 @@
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            eDoc Web App<br>
-                            
+                                               
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details</p><br><br>
                                 </td>
-                            </tr>
-                            
-                            <tr>
-                                
+                            </tr>                           
+                            <tr>                               
                                 <td class="label-td" colspan="2">
                                     <label for="name" class="form-label">Name: </label>
                                 </td>
@@ -335,8 +329,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     '.$name.'<br><br>
-                                </td>
-                                
+                                </td>                               
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
@@ -370,8 +363,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Specialties: </label>
-                                    
+                                    <label for="spec" class="form-label">Specialties: </label>                                    
                                 </td>
                             </tr>
                             <tr>
@@ -381,14 +373,9 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
-                                
-                                    
-                                </td>
-                
-                            </tr>
-                           
-
+            <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
+                                </td>             
+                            </tr>                   
                         </table>
                         </div>
                     </center>
@@ -425,8 +412,7 @@
                                 <td>
                                     <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Add New Doctor.</p><br><br>
                                 </td>
-                            </tr>
-                            
+                            </tr>                            
                             <tr>
                                 <form action="add-new.php" method="POST" class="add-new-form">
                                 <td class="label-td" colspan="2">
@@ -436,8 +422,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <input type="text" name="name" class="input-text" placeholder="Doctor Name" required><br>
-                                </td>
-                                
+                                </td>                             
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
@@ -471,15 +456,13 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Choose specialties: </label>
-                                    
+                                    <label for="spec" class="form-label">Choose specialties: </label>                                   
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <select name="spec" id="" class="box" >';
-                                        
-        
+                                               
                                         $list11 = $database->query("select  * from  specialties order by sname asc;");
         
                                         for ($y=0;$y<$list11->num_rows;$y++){
@@ -488,9 +471,6 @@
                                             $id00=$row00["id"];
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         };
-        
-        
-        
                                         
                         echo     '       </select><br>
                                 </td>
@@ -513,18 +493,14 @@
                                 <td class="label-td" colspan="2">
                                     <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required><br>
                                 </td>
-                            </tr>
-                            
-                
+                            </tr>                                    
                             <tr>
                                 <td colspan="2">
                                     <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 
                                     <input type="submit" value="Add" class="login-btn btn-primary btn">
-                                </td>
-                
-                            </tr>
-                           
+                                </td>               
+                            </tr>                           
                             </form>
                             </tr>
                         </table>
@@ -544,8 +520,7 @@
                             <br><br><br><br>
                                 <h2>New Record Added Successfully!</h2>
                                 <a class="close" href="doctors.php">&times;</a>
-                                <div class="content">
-                                    
+                                <div class="content">                                   
                                     
                                 </div>
                                 <div style="display: flex;justify-content: center;">
@@ -580,7 +555,6 @@
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
-
                 );
 
             if($error_1!='4'){
@@ -600,8 +574,8 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Edit Doctor Details.</p>
-                                        Doctor ID : '.$id.' (Auto Generated)<br><br>
+                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Edit Doctor Details</p>
+                                        Doctor ID : '.$id.' <br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -617,8 +591,7 @@
                                         <input type="email" name="email" class="input-text" placeholder="Email Address" value="'.$email.'" required><br>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        
+                                    <tr>                                      
                                         <td class="label-td" colspan="2">
                                             <label for="name" class="form-label">Name: </label>
                                         </td>
@@ -626,10 +599,8 @@
                                     <tr>
                                         <td class="label-td" colspan="2">
                                             <input type="text" name="name" class="input-text" placeholder="Doctor Name" value="'.$name.'" required><br>
-                                        </td>
-                                        
-                                    </tr>
-                                    
+                                        </td>                                      
+                                    </tr>                                
                                     <tr>
                                         <td class="label-td" colspan="2">
                                             <label for="nic" class="form-label">NIC: </label>
@@ -659,8 +630,7 @@
                                     <tr>
                                         <td class="label-td" colspan="2">
                                             <select name="spec" id="" class="box">';
-                                                
-                
+                                                               
                                                 $list11 = $database->query("select  * from  specialties;");
                 
                                                 for ($y=0;$y<$list11->num_rows;$y++){
@@ -668,12 +638,9 @@
                                                     $sn=$row00["sname"];
                                                     $id00=$row00["id"];
                                                     echo "<option value=".$id00.">$sn</option><br/>";
-                                                };
-                
-                
-                
+                                                };             
                                                 
-                                echo     '       </select><br><br>
+                                echo     ' </select><br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -694,18 +661,14 @@
                                         <td class="label-td" colspan="2">
                                             <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required><br>
                                         </td>
-                                    </tr>
-                                    
-                        
+                                    </tr>                                                    
                                     <tr>
                                         <td colspan="2">
                                             <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         
                                             <input type="submit" value="Save" class="login-btn btn-primary btn">
-                                        </td>
-                        
-                                    </tr>
-                                
+                                        </td>                        
+                                    </tr>                               
                                     </form>
                                     </tr>
                                 </table>
@@ -722,30 +685,23 @@
                         <div class="popup">
                         <center>
                         <br><br><br><br>
-                            <h2>Edit Successfully!</h2>
+                            <h2>Edit Successfully</h2>
                             <a class="close" href="doctors.php">&times;</a>
-                            <div class="content">
-                                
-                                
+                            <div class="content">                                                           
                             </div>
-                            <div style="display: flex;justify-content: center;">
-                            
+                            <div style="display: flex;justify-content: center;">                          
                             <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;OK&nbsp;&nbsp;</font></button></a>
-
                             </div>
                             <br><br>
                         </center>
                 </div>
                 </div>
     ';
-
-
-
         }; };
     };
 
 ?>
-</div>
-
+  </div>
 </body>
+
 </html>
