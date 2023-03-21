@@ -107,7 +107,7 @@
     <td class="menu-btn menu-icon-appoinment">
       <a href="appointment.php" class="non-style-link-menu">
         <div>
-          <p class="menu-text">My Bookings</p>
+          <p class="menu-text">My Appointments</p>
       </a></div>
     </td>
   </tr>
@@ -169,14 +169,9 @@
             <table class="filter-container doctor-header patient-header" style="border: none;width:95%" border="0">
               <tr>
                 <td>
-                  <h3>Welcome!</h3>
-                  <h1><?php echo $username  ?>.</h1>
-                  <p>Haven't any idea about doctors? no problem let's jumping to
-                    <a href="doctors.php" class="non-style-link"><b>"All Doctors"</b></a> section or
-                    <a href="schedule.php" class="non-style-link"><b>"Sessions"</b> </a><br>
-                    Track your past and future appointments history.<br>Also find out the expected arrival time of your
-                    doctor or medical consultant.<br><br>
-                  </p>
+                  <h3>WELCOME!</h3>
+                  <h1><?php echo $username  ?></h1>
+
 
                   <h3>Channel a Doctor Here</h3>
                   <form action="schedule.php" method="post" style="display: flex">
@@ -264,7 +259,7 @@
                           <?php    echo $appointmentrow ->num_rows  ?>
                         </div><br>
                         <div class="h3-dashboard">
-                          NewBooking &nbsp;&nbsp;
+                          New Appoinment
                         </div>
                       </div>
                       <div class="btn-icon-back dashboard-icons"
@@ -280,7 +275,7 @@
                         <div class="h1-dashboard">
                           <?php    echo $schedulerow ->num_rows  ?>
                         </div><br>
-                        <div class="h3-dashboard" style="font-size: 15px">
+                        <div class="h3-dashboard">
                           Today Sessions
                         </div>
                       </div>
