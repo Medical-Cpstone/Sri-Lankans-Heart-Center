@@ -235,10 +235,6 @@
                                         echo date("l",strtotime("+1 week"));
                                         ?>
                 </p>
-                <p
-                  style="padding-bottom:19px;padding-left:50px;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
-                  Upcoming Appointments until 7 days<br>
-                </p>
 
               </td>
               <td>
@@ -248,10 +244,7 @@
                                         echo date("l",strtotime("+1 week"));
                                         ?>
                 </p>
-                <p
-                  style="padding-bottom:19px;text-align:right;padding-right:50px;font-size:15px;font-weight:500;color:#212529e3;line-height: 20px;">
-                  Upcoming Sessions that Scheduled until 7 days<br>
-                </p>
+
               </td>
             </tr>
             <tr>
@@ -318,16 +311,16 @@
                                                             
                                                         </td>
 
-                                                        <td style="font-weight:600;"> &nbsp;'.
+                                                        <td style="font-weight:600;text-align:center;"> &nbsp;'.
                                                         
                                                         substr($pname,0,25)
                                                         .'</td >
-                                                        <td style="font-weight:600;"> &nbsp;'.
+                                                        <td style="font-weight:600;text-align:center;"> &nbsp;'.
                                                         
                                                             substr($docname,0,25)
                                                             .'</td >
-                                                                                                               
-                                                        <td>
+                                                                                                              
+                                                        <td style="text-align:center;">
                                                         '.substr($title,0,15).'
                                                         </td>
 
@@ -401,13 +394,13 @@
                                                     $scheduletime=$row["scheduletime"];
                                                     $nop=$row["nop"];
                                                     echo '<tr>
-                                                        <td style="padding:20px;"> &nbsp;'.
+                                                        <td style="padding:20px;text-align:center;""> &nbsp;'.
                                                         substr($title,0,30)
                                                         .'</td>
-                                                        <td>
+                                                        <td style="text-align:center;">
                                                         '.substr($docname,0,20).'
                                                         </td>
-                                                        <td style="text-align:center;">
+                                                        <td style="text-align:center;text-align:center;"">
                                                             '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
                                                         </td>                  
                                                     </tr>';
