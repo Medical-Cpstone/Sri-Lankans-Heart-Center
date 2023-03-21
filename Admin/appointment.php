@@ -125,25 +125,13 @@
 
         </td>
         <td width="15%">
-          <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-            Today's Date
-          </p>
           <p class="heading-sub12" style="padding: 0;margin: 0;">
             <?php 
-
-                        date_default_timezone_set('Asia/Colombo');
-
-                        $today = date('Y-m-d');
-                        echo $today;
 
                         $list110 = $database->query("select  * from  appointment;");
 
                         ?>
           </p>
-        </td>
-        <td width="10%">
-          <button class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img
-              src="../img/calendar.svg" width="100%"></button>
         </td>
       </tr>
 
@@ -151,7 +139,7 @@
         <td colspan="4" style="padding-top:10px;width: 100%;">
 
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Appointments
-            (<?php echo $list110->num_rows; ?>)</p>
+            <?php echo $list110->num_rows; ?></p>
         </td>
 
       </tr>
@@ -501,12 +489,11 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>Are you sure?</h2>
+                        <h2>Are you sure you want to delete this record?</h2>
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br><br>
-                            Patient Name: &nbsp;<b>'.substr($nameget,0,40).'</b><br>
-                            Appointment number &nbsp; : <b>'.substr($apponum,0,40).'</b><br><br>
+                            Patient Name: &nbsp; '.substr($nameget,0,40).'</b><br>
+                            Appointment number &nbsp;: '.substr($apponum,0,40).'</b><br><br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
