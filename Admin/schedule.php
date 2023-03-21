@@ -52,7 +52,7 @@
                 </td>
                 <td style="padding:0px;margin:0px;">
                   <p class="profile-title">Administrator</p>
-                  <p class="profile-subtitle">admin@edoc.com</p>
+                  <p class="profile-subtitle">admin@gmail.com</p>
                 </td>
               </tr>
               <tr>
@@ -151,7 +151,7 @@
         <td colspan="4" style="padding-top:10px;width: 100%;">
 
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Sessions
-            (<?php echo $list110->num_rows; ?>)</p>
+            <?php echo $list110->num_rows; ?></p>
         </td>
       </tr>
       <tr>
@@ -534,7 +534,7 @@
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details</p><br><br>
                                 </td>
                             </tr>                          
                             <tr>                               
