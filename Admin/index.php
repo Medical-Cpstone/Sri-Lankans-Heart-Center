@@ -44,8 +44,8 @@
     include("../connection.php");
     
     ?>
-  
-   <div class="container">
+
+  <div class="container">
     <div class="menu">
       <table class="menu-container" border="0">
         <tr>
@@ -195,7 +195,7 @@
                         <?php    echo $appointmentrow ->num_rows  ?>
                       </div><br>
                       <div class="h3-dashboard">
-                        New Appoinments &nbsp;&nbsp;
+                        New Booking &nbsp;&nbsp;
                       </div>
                     </div>
                     <div class="btn-icon-back dashboard-icons"
