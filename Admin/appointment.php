@@ -35,8 +35,6 @@
         header("location: ../login.php");
     }
     
-    
-
     //import database
     include("../connection.php");
 
@@ -54,7 +52,7 @@
                 </td>
                 <td style="padding:0px;margin:0px;">
                   <p class="profile-title">Administrator</p>
-                  <p class="profile-subtitle">admin@edoc.com</p>
+                  <p class="profile-subtitle">admin@gmail.com</p>
                 </td>
               </tr>
               <tr>
@@ -133,7 +131,7 @@
           <p class="heading-sub12" style="padding: 0;margin: 0;">
             <?php 
 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('Asia/Colombo');
 
                         $today = date('Y-m-d');
                         echo $today;
@@ -147,8 +145,6 @@
           <button class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img
               src="../img/calendar.svg" width="100%"></button>
         </td>
-
-
       </tr>
 
       <tr>
@@ -165,18 +161,8 @@
             <table class="filter-container" border="0">
               <tr>
                 <td width="10%">
-
                 </td>
-                <td width="5%" style="text-align: center;">
-                  Date:
-                </td>
-                <td width="30%">
-                  <form action="" method="post">
 
-                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items"
-                      style="margin: 0;width: 95%;">
-
-                </td>
                 <td width="5%" style="text-align: center;">
                   Doctor:
                 </td>
@@ -185,8 +171,7 @@
                     style="width:90% ;height: 37px;margin: 0;">
                     <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br />
 
-                    <?php 
-                             
+                    <?php                              
                                 $list11 = $database->query("select  * from  doctor order by docname asc;");
 
                                 for ($y=0;$y<$list11->num_rows;$y++){
@@ -195,8 +180,6 @@
                                     $id00=$row00["docid"];
                                     echo "<option value=".$id00.">$sn</option><br/>";
                                 };
-
-
                                 ?>
 
                   </select>
@@ -230,8 +213,7 @@
                             $docid=$_POST["docid"];
                             $sqlpt2=" doctor.docid=$docid ";
                         }
-                        //echo $sqlpt2;
-                        //echo $sqlpt1;
+                        
                         $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid";
                         $sqllist=array($sqlpt1,$sqlpt2);
                         $sqlkeywords=array(" where "," and ");
@@ -243,18 +225,11 @@
                                 $key2++;
                             };
                         };
-                        //echo $sqlmain;
-
-                        
-                        
-                        //
+              
                     }else{
                         $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  order by schedule.scheduledate desc";
 
                     }
-
-
-
                 ?>
 
       <tr>
@@ -267,39 +242,30 @@
                     <th class="table-headin">
                       Patient name
                     </th>
+
                     <th class="table-headin">
-
                       Appointment number
-
                     </th>
-
 
                     <th class="table-headin">
                       Doctor
                     </th>
+
                     <th class="table-headin">
-
-
                       Session Title
-
                     </th>
 
-                    <th class="table-headin" style="font-size:10px">
-
+                    <th class="table-headin">
                       Session Date & Time
-
                     </th>
 
                     <th class="table-headin">
-
                       Appointment Date
-
                     </th>
 
                     <th class="table-headin">
-
                       Events
-
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -346,13 +312,13 @@
                                         '.$apponum.'
                                         
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($docname,0,25).'
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($title,0,15).'
                                         </td>
-                                        <td style="text-align:center;font-size:12px;">
+                                        <td style="text-align:center;">
                                             '.substr($scheduledate,0,10).' <br>'.substr($scheduletime,0,5).'
                                         </td>
                                         
@@ -361,7 +327,7 @@
                                         </td>
 
                                         <td>
-                                        <div style="display:flex;justify-content: center;">
+                                        <div style="display:flex;justify-content:center;">
                                         
                                         <!--<a href="?action=view&id='.$appoid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                        &nbsp;&nbsp;&nbsp;-->
