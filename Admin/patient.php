@@ -150,29 +150,16 @@
 
         </td>
         <td width="15%">
-          <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-            Today's Date
-          </p>
+
           <p class="heading-sub12" style="padding: 0;margin: 0;">
-            <?php 
-                        date_default_timezone_set('Asia/Kolkata');
-
-                        $date = date('Y-m-d');
-                        echo $date;
-                        ?>
           </p>
         </td>
-        <td width="10%">
-          <button class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img
-              src="../img/calendar.svg" width="100%"></button>
-        </td>
-
       </tr>
 
       <tr>
         <td colspan="4" style="padding-top:10px;">
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Patients
-            (<?php echo $list11->num_rows; ?>)</p>
+            <?php echo $list11->num_rows; ?></p>
         </td>
 
       </tr>
@@ -230,9 +217,7 @@
                                     echo '<tr>
                                     <td colspan="4">
                                     <br><br><br><br>
-                                    <center>
-                                    <img src="../img/notfound.svg" width="25%">
-                                    
+                                    <center>                                   
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
                                     <a class="non-style-link" href="patient.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Patients &nbsp;</font></button>
@@ -254,22 +239,22 @@
                                     $tel=$row["ptel"];
                                     
                                     echo '<tr>
-                                        <td> &nbsp;'.
+                                        <td style="text-align:center;"> &nbsp;'.
                                         substr($name,0,35)
                                         .'</td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($nic,0,12).'
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                             '.substr($tel,0,10).'
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($email,0,20).'
                                          </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($dob,0,10).'
                                         </td>
-                                        <td >
+                                        <td style="text-align:center;">
                                         <div style="display:flex;justify-content: center;">
                                         
                                         <a href="?action=view&id='.$pid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
@@ -321,7 +306,7 @@
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details</p><br><br>
                                 </td>
                             </tr>
                             <tr>
