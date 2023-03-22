@@ -36,8 +36,7 @@
     }else{
         header("location: ../login.php");
     }
-    
-
+  
     //import database
     include("../connection.php");
     $userrow = $database->query("select * from patient where pemail='$useremail'");
@@ -128,11 +127,9 @@
             </button></a>
         </td>
         <td>
-
           <form action="" method="post" class="header-search">
-
             <input type="search" name="search" class="input-text header-searchbar"
-              placeholder="Search Doctor name or Email" list="doctors">&nbsp;&nbsp;
+              placeholder="Search doctor name or email" list="doctors">&nbsp;&nbsp;
 
             <?php
                                 echo '<datalist id="doctors">';
@@ -148,40 +145,15 @@
 
                             echo ' </datalist>';
 ?>
-
-
             <input type="Submit" value="Search" class="login-btn btn-primary btn"
               style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
-
           </form>
-
         </td>
-        <td width="15%">
-          <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-            Today's Date
-          </p>
-          <p class="heading-sub12" style="padding: 0;margin: 0;">
-            <?php 
-                        date_default_timezone_set('Asia/Kolkata');
-
-                        $date = date('Y-m-d');
-                        echo $date;
-                        ?>
-          </p>
-        </td>
-        <td width="10%">
-          <button class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img
-              src="../img/calendar.svg" width="100%"></button>
-        </td>
-
-
       </tr>
-
-
       <tr>
         <td colspan="4" style="padding-top:10px;">
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Doctors
-            (<?php echo $list11->num_rows; ?>)</p>
+            <?php echo $list11->num_rows; ?></p>
         </td>
 
       </tr>
@@ -192,11 +164,8 @@
                         $sqlmain= "select * from doctor where docemail='$keyword' or docname='$keyword' or docname like '$keyword%' or docname like '%$keyword' or docname like '%$keyword%'";
                     }else{
                         $sqlmain= "select * from doctor order by docid desc";
-
                     }
-
                 ?>
-
       <tr>
         <td colspan="4">
           <center>
@@ -205,37 +174,28 @@
                 <thead>
                   <tr>
                     <th class="table-headin">
-
-
                       Doctor Name
-
                     </th>
                     <th class="table-headin">
                       Email
                     </th>
                     <th class="table-headin">
-
                       Specialties
-
                     </th>
                     <th class="table-headin">
-
                       Events
-
                   </tr>
                 </thead>
                 <tbody>
 
-                  <?php
-                           
+                  <?php                         
                                 $result= $database->query($sqlmain);
 
                                 if($result->num_rows==0){
                                     echo '<tr>
                                     <td colspan="4">
                                     <br><br><br><br>
-                                    <center>                     
-                                    
+                                    <center>                                                        
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
                                     <a class="non-style-link" href="doctors.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Doctors &nbsp;</font></button>
@@ -243,8 +203,7 @@
                                     </center>
                                     <br><br><br><br>
                                     </td>
-                                    </tr>';
-                                    
+                                    </tr>';                                   
                                 }
                                 else{
                                 for ( $x=0; $x<$result->num_rows;$x++){
@@ -257,29 +216,25 @@
                                     $spcil_array= $spcil_res->fetch_assoc();
                                     $spcil_name=$spcil_array["sname"];
                                     echo '<tr>
-                                        <td> &nbsp;'.
+                                        <td style="text-align:center;"> &nbsp;'.
                                         substr($name,0,30)
                                         .'</td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($email,0,20).'
                                         </td>
-                                        <td>
+                                        <td style="text-align:center;">
                                             '.substr($spcil_name,0,20).'
                                         </td>
-
-                                        <td>
-                                        <div style="display:flex;justify-content: center;">
-                                        
+                                        <td style="text-align:center;">
+                                        <div style="display:flex;justify-content: center;">                                      
                                         <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                        &nbsp;&nbsp;&nbsp;
                                        <a href="?action=session&id='.$docid.'&name='.$name.'"  class="non-style-link"><button  class="btn-primary-soft btn button-icon menu-icon-session-active"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Sessions</font></button></a>
                                         </div>
                                         </td>
-                                    </tr>';
-                                    
+                                    </tr>';                                   
                                 }
-                            }
-                                 
+                            }                                
                             ?>
 
                 </tbody>
@@ -289,13 +244,11 @@
           </center>
         </td>
       </tr>
-
     </table>
   </div>
   </div>
   <?php 
-    if($_GET){
-        
+    if($_GET){       
         $id=$_GET["id"];
         $action=$_GET["action"];
         if($action=='drop'){
@@ -347,7 +300,7 @@
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details</p><br><br>
                                 </td>
                             </tr>
                             
@@ -430,19 +383,16 @@
                         <h2>Redirect to Doctors sessions?</h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            You want to view All sessions by <br>('.substr($name,0,40).').
+                            You want to view all sessions by '.substr($name,0,40).'
                             
                         </div>
                         <form action="schedule.php" method="post" style="display: flex">
 
                                 <input type="hidden" name="search" value="'.$name.'">
-
-                                
+                            
                         <div style="display: flex;justify-content:center;margin-left:45%;margin-top:6%;;margin-bottom:6%;">
                         
-                        <input type="submit"  value="Yes" class="btn-primary btn"   >
-                        
-                        
+                        <input type="submit"  value="Yes" class="btn-primary btn"   >                                         
                         </div>
                     </center>
             </div>
