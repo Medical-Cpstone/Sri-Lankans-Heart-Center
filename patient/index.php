@@ -107,7 +107,7 @@
     <td class="menu-btn menu-icon-appoinment">
       <a href="appointment.php" class="non-style-link-menu">
         <div>
-          <p class="menu-text">My Appointments</p>
+          <p class="menu-text">My Booking</p>
       </a></div>
     </td>
   </tr>
@@ -169,15 +169,12 @@
             <table class="filter-container doctor-header patient-header" style="border: none;width:95%" border="0">
               <tr>
                 <td>
-                  <h3>WELCOME!</h3>
                   <h1><?php echo $username  ?></h1>
-
-
-                  <h3>Channel a Doctor Here</h3>
+                  <h3>Channel A Doctor Here</h3>
                   <form action="schedule.php" method="post" style="display: flex">
 
                     <input type="search" name="search" class="input-text "
-                      placeholder="Search Doctor and We will Find The Session Available" list="doctors"
+                      placeholder="Search for a Doctor and we will find the session available" list="doctors"
                       style="width:45%;">&nbsp;&nbsp;
 
                     <?php
@@ -259,15 +256,13 @@
                           <?php    echo $appointmentrow ->num_rows  ?>
                         </div><br>
                         <div class="h3-dashboard">
-                          New Appoinment
+                          New Booking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </div>
                       </div>
                       <div class="btn-icon-back dashboard-icons"
                         style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                     </div>
-
                   </td>
-
                   <td style="width: 25%;">
                     <div class="dashboard-items"
                       style="padding:20px;margin:auto;width:95%;display: flex;padding-top:21px;padding-bottom:21px;">
@@ -298,7 +293,7 @@
 
                   <tr>
                     <th class="table-headin">
-                      Appoint. Number
+                      Appointment No.
                     </th>
                     <th class="table-headin">
                       Session Title
@@ -309,7 +304,7 @@
                     </th>
 
                     <th class="table-headin">
-                      Sheduled Date & Time
+                      Scheduled Date & Time
                     </th>
 
                   </tr>
@@ -349,21 +344,18 @@
                                                     $scheduletime=$row["scheduletime"];
                                                    
                                                     echo '<tr>
-                                                        <td style="padding:30px;font-size:25px;font-weight:700;"> &nbsp;'.
+                                                        <td style="padding:30px;font-size:25px;font-weight:700;text-align:center;"> &nbsp;'.
                                                         $apponum
                                                         .'</td>
                                                         <td style="padding:20px;"> &nbsp;'.
                                                         substr($title,0,30)
                                                         .'</td>
-                                                        <td>
+                                                        <td style="text-align:center;">
                                                         '.substr($docname,0,20).'
                                                         </td>
                                                         <td style="text-align:center;">
                                                             '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
-                                                        </td>
-
-                
-                                                       
+                                                        </td>                                                                    
                                                     </tr>';
                                                     
                                                 }
@@ -372,11 +364,9 @@
                                             ?>
 
                 </tbody>
-
               </table>
             </div>
           </center>
-
         </td>
       </tr>
     </table>
@@ -385,7 +375,6 @@
       </table>
   </div>
   </div>
-
 
 </body>
 
