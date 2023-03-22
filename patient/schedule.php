@@ -158,32 +158,26 @@
         <td>
           <form action="" method="post" class="header-search">
 
-            <input type="search" name="search" class="input-text header-searchbar"
-              placeholder="Search Doctor name or Email or Date (YYYY-MM-DD)" list="doctors"
-              value="<?php  echo $insertkey ?>">&nbsp;&nbsp;
+            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search doctor name"
+              list="doctors" value="<?php  echo $insertkey ?>">&nbsp;&nbsp;
 
             <?php
                                             echo '<datalist id="doctors">';
                                             $list11 = $database->query("select DISTINCT * from  doctor;");
                                             $list12 = $database->query("select DISTINCT * from  schedule GROUP BY title;");
-                               
-
+                             
                                             for ($y=0;$y<$list11->num_rows;$y++){
                                                 $row00=$list11->fetch_assoc();
                                                 $d=$row00["docname"];
                                                
-                                                echo "<option value='$d'><br/>";
-                                               
+                                                echo "<option value='$d'><br/>";                                              
                                             };
-
-
                                             for ($y=0;$y<$list12->num_rows;$y++){
                                                 $row00=$list12->fetch_assoc();
                                                 $d=$row00["title"];
                                                
                                                 echo "<option value='$d'><br/>";
                                                                                          };
-
                                         echo ' </datalist>';
             ?>
 
@@ -191,22 +185,6 @@
               style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
           </form>
         </td>
-        <td width="15%">
-          <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-            Today's Date
-          </p>
-          <p class="heading-sub12" style="padding: 0;margin: 0;">
-            <?php                               
-                                echo $today;                           
-
-                        ?>
-          </p>
-        </td>
-        <td width="10%">
-          <button class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img
-              src="../img/calendar.svg" width="100%"></button>
-        </td>
-
       </tr>
 
       <tr>
@@ -233,10 +211,9 @@
                                     echo '<tr>
                                     <td colspan="4">
                                     <br><br><br><br>
-                                    <center>
-                                    
+                                    <center>                  
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords !</p>
                                     <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Sessions &nbsp;</font></button>
                                     </a>
                                     </center>
@@ -276,7 +253,7 @@
                                                                 '.substr($docname,0,30).'
                                                             </div>
                                                             <div class="h4-search">
-                                                                '.$scheduledate.'<br>Starts: <b>@'.substr($scheduletime,0,5).'</b> (24h)
+                                                            <b> '.$scheduledate.'<br>Starts: @'.substr($scheduletime,0,5).'</b> (24h)
                                                             </div>
                                                             <br>
                                                             <a href="booking.php?id='.$scheduleid.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Book Now</font></button></a>
