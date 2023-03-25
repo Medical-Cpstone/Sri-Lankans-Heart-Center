@@ -291,8 +291,7 @@
                     <center>
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
-                        <div class="content">
-                            eDoc Web App<br>
+                        <div class="content">                      
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
@@ -507,11 +506,8 @@
                                                     $sn=$row00["sname"];
                                                     $id00=$row00["id"];
                                                     echo "<option value=".$id00.">$sn</option><br/>";
-                                                };
-                
-                
-                
-                                                
+                                                };               
+                                                                          
                                 echo     '       </select><br><br>
                                         </td>
                                     </tr>
@@ -560,10 +556,9 @@
                         <div class="popup">
                         <center>
                         <br><br><br><br>
-                            <h2>Edit Successfully!</h2>
+                            <h2>Edit Successfully</h2>
                             <a class="close" href="doctors.php">&times;</a>
-                            <div class="content">
-                                
+                            <div class="content">                     
                                 
                             </div>
                             <div style="display: flex;justify-content: center;">
