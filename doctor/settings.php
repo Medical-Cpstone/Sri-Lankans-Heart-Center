@@ -176,7 +176,7 @@
                           Account Settings &nbsp;
                         </div><br>
                         <div class="h3-dashboard" style="font-size: 15px;">
-                          Edit your Account Details & Change Password
+                          Edit your Account Details
                         </div>
                       </div>
 
@@ -201,7 +201,7 @@
 
                         </div><br>
                         <div class="h3-dashboard" style="font-size: 15px;">
-                          View Personal information About Your Account
+                          View details about your account
                         </div>
                       </div>
                     </div>
@@ -224,7 +224,7 @@
                           Delete Account
                         </div><br>
                         <div class="h3-dashboard" style="font-size: 15px;">
-                          Will Permanently Remove your Account
+                          Will permanently remove your account
                         </div>
                       </div>
                     </div>
