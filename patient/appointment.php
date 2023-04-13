@@ -72,7 +72,7 @@
                   <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                 </td>
                 <td style="padding:0px;margin:0px;">
-                  <p class="profile-title"><?php echo substr($username,0,13)  ?>..</p>
+                  <p class="profile-title"><?php echo substr($username,0,13)  ?></p>
                   <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                 </td>
               </tr>
@@ -167,7 +167,7 @@
         <td colspan="4" style="padding-top:10px;width: 100%;">
 
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">My Bookings
-            (<?php echo $result->num_rows; ?>)</p>
+            <?php echo $result->num_rows; ?></p>
         </td>
       </tr>
       <tr>
@@ -210,7 +210,7 @@
                                     <center>
                                     
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords !</p>
                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
                                     </a>
                                     </center>
