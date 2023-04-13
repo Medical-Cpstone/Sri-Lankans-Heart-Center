@@ -60,7 +60,7 @@
                   <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                 </td>
                 <td style="padding:0px;margin:0px;">
-                  <p class="profile-title"><?php echo substr($username,0,13)  ?>..</p>
+                  <p class="profile-title"><?php echo substr($username,0,13)  ?></p>
                   <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                 </td>
               </tr>
@@ -127,8 +127,7 @@
                 $insertkey="";
                 $q='';
                 $searchtype="All";
-                        if($_POST){
-                        //print_r($_POST);
+                        if($_POST){ 
                         
                         if(!empty($_POST["search"])){
                             
@@ -190,7 +189,7 @@
       <tr>
         <td colspan="4" style="padding-top:10px;width: 100%;">
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">
-            <?php echo $searchtype." Sessions"."(".$result->num_rows.")"; ?> </p>
+            <?php echo $searchtype." Sessions"." ".$result->num_rows." "; ?> </p>
           <p class="heading-main12" style="margin-left: 45px;font-size:22px;color:rgb(49, 49, 49)">
             <?php echo $q.$insertkey.$q ; ?> </p>
         </td>
