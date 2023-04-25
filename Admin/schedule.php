@@ -320,10 +320,10 @@
                                     $scheduletime=$row["scheduletime"];
                                     $nop=$row["nop"];
                                     echo '<tr>
-                                        <td> &nbsp;'.
+                                        <td style="text-align:center;"> &nbsp;'.
                                         substr($title,0,30)
                                         .'</td>
-                                        <td>
+                                        <td style="text-align:center;">
                                         '.substr($docname,0,20).'
                                         </td>
                                         <td style="text-align:center;">
@@ -333,7 +333,7 @@
                                             '.$nop.'
                                         </td>
 
-                                        <td>
+                                        <td style="text-align:center;">
                                         <div style="display:flex;justify-content: center;">
                                         
                                         <a href="?action=view&id='.$scheduleid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
@@ -421,9 +421,6 @@
                                             $id00=$row00["docid"];
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         };
-        
-        
-        
                                         
                         echo     '       </select><br><br>
                                 </td>
@@ -640,7 +637,7 @@
                                              <center>
                                       
                                              <br>
-                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords !</p>
+                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords</p>
                                              <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
                                              </a>
                                              </center>
