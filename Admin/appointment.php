@@ -34,7 +34,7 @@
     }else{
         header("location: ../login.php");
     }
-    
+
     //import database
     include("../connection.php");
 
@@ -52,7 +52,7 @@
                 </td>
                 <td style="padding:0px;margin:0px;">
                   <p class="profile-title">Administrator</p>
-                  <p class="profile-subtitle">admin@gmail.com</p>
+                  <p class="profile-subtitle">admin@edoc.com</p>
                 </td>
               </tr>
               <tr>
@@ -125,13 +125,24 @@
 
         </td>
         <td width="15%">
+          <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
+            Today's Date
+          </p>
           <p class="heading-sub12" style="padding: 0;margin: 0;">
             <?php 
 
-                        $list110 = $database->query("select  * from  appointment;");
+                        date_default_timezone_set('Asia/Colombo');
 
+                        $today = date('Y-m-d');
+                        echo $today;
+
+                        $list110 = $database->query("select  * from  appointment;");
                         ?>
           </p>
+        </td>
+        <td width="10%">
+          <button class="btn-label" style="display: flex;justify-content: center;align-items: center;"><img
+              src="../img/calendar.svg" width="100%"></button>
         </td>
       </tr>
 
@@ -149,8 +160,18 @@
             <table class="filter-container" border="0">
               <tr>
                 <td width="10%">
-                </td>
 
+                </td>
+                <td width="5%" style="text-align: center;">
+                  Date:
+                </td>
+                <td width="30%">
+                  <form action="" method="post">
+
+                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items"
+                      style="margin: 0;width: 95%;">
+
+                </td>
                 <td width="5%" style="text-align: center;">
                   Doctor:
                 </td>
@@ -159,7 +180,8 @@
                     style="width:90% ;height: 37px;margin: 0;">
                     <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br />
 
-                    <?php                              
+                    <?php 
+                             
                                 $list11 = $database->query("select  * from  doctor order by docname asc;");
 
                                 for ($y=0;$y<$list11->num_rows;$y++){
@@ -168,6 +190,7 @@
                                     $id00=$row00["docid"];
                                     echo "<option value=".$id00.">$sn</option><br/>";
                                 };
+
                                 ?>
 
                   </select>
@@ -201,7 +224,8 @@
                             $docid=$_POST["docid"];
                             $sqlpt2=" doctor.docid=$docid ";
                         }
-                        
+                        //echo $sqlpt2;
+                        //echo $sqlpt1;
                         $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid";
                         $sqllist=array($sqlpt1,$sqlpt2);
                         $sqlkeywords=array(" where "," and ");
@@ -213,7 +237,7 @@
                                 $key2++;
                             };
                         };
-              
+
                     }else{
                         $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  order by schedule.scheduledate desc";
 
@@ -230,37 +254,29 @@
                     <th class="table-headin">
                       Patient name
                     </th>
-
                     <th class="table-headin">
                       Appointment number
                     </th>
-
                     <th class="table-headin">
                       Doctor
                     </th>
-
                     <th class="table-headin">
                       Session Title
                     </th>
-
                     <th class="table-headin">
                       Session Date & Time
                     </th>
-
                     <th class="table-headin">
                       Appointment Date
                     </th>
-
                     <th class="table-headin">
-                      Events
-                    </th>
+                      Event
                   </tr>
                 </thead>
                 <tbody>
 
                   <?php
 
-                                
                                 $result= $database->query($sqlmain);
 
                                 if($result->num_rows==0){
@@ -268,9 +284,10 @@
                                     <td colspan="7">
                                     <br><br><br><br>
                                     <center>
+                                    <img src="../img/notfound.svg" width="25%">
                                     
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords</p>
                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
                                     </a>
                                     </center>
@@ -292,13 +309,13 @@
                                     $apponum=$row["apponum"];
                                     $appodate=$row["appodate"];
                                     echo '<tr >
-                                        <td style="font-weight:600;"> &nbsp;'.
+                                        <td style="text-align:center;"> &nbsp;'.
                                         
                                         substr($pname,0,25)
                                         .'</td >
-                                        <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
+                                        <td style="text-align:center;">
                                         '.$apponum.'
-                                        
+                                      
                                         </td>
                                         <td style="text-align:center;">
                                         '.substr($docname,0,25).'
@@ -309,13 +326,11 @@
                                         <td style="text-align:center;">
                                             '.substr($scheduledate,0,10).' <br>'.substr($scheduletime,0,5).'
                                         </td>
-                                        
                                         <td style="text-align:center;">
                                             '.$appodate.'
                                         </td>
-
                                         <td>
-                                        <div style="display:flex;justify-content:center;">
+                                        <div style="display:flex;justify-content: center;">
                                         
                                         <!--<a href="?action=view&id='.$appoid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                        &nbsp;&nbsp;&nbsp;-->
@@ -368,7 +383,7 @@
 
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Add New Session.</p><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Add New Session</p><br>
                                 </td>
                             </tr>
                             <tr>
@@ -402,9 +417,7 @@
                                             $id00=$row00["docid"];
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         };
-        
-        
-        
+      
                                         
                         echo     '       </select><br><br>
                                 </td>
@@ -489,11 +502,12 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>Are you sure you want to delete this record?</h2>
+                        <h2>Are you sure?</h2>
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
-                            Patient Name: &nbsp; '.substr($nameget,0,40).'</b><br>
-                            Appointment number &nbsp;: '.substr($apponum,0,40).'</b><br><br>
+                            You want to delete this record<br><br>
+                            Patient Name: &nbsp;<b>'.substr($nameget,0,40).'</b><br>
+                            Appointment number &nbsp; : <b>'.substr($apponum,0,40).'</b><br><br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
@@ -533,7 +547,7 @@
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details</p><br><br>
                                 </td>
                             </tr>
                             
