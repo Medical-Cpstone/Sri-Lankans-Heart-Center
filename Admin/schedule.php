@@ -23,9 +23,6 @@
 
 <body>
   <?php
-
-    //learn from w3schools.com
-
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -37,12 +34,9 @@
         header("location: ../login.php");
     }
     
-    
-
     //import database
     include("../connection.php");
 
-    
     ?>
   <div class="container">
     <div class="menu">
@@ -169,66 +163,13 @@
         <td colspan="4" style="padding-top:10px;width: 100%;">
 
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Sessions
-            <?php echo $list110->num_rows; ?></p>
+            <br>
         </td>
-
       </tr>
-      <tr>
-        <td colspan="4" style="padding-top:0px;width: 100%;">
-          <center>
-            <table class="filter-container" border="0">
-              <tr>
-                <td width="10%">
+    </table>
+    </center>
 
-                </td>
-                <td width="5%" style="text-align: center;">
-                  Date:
-                </td>
-                <td width="30%">
-                  <form action="" method="post">
-
-                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items"
-                      style="margin: 0;width: 95%;">
-
-                </td>
-                <td width="5%" style="text-align: center;">
-                  Doctor:
-                </td>
-                <td width="30%">
-                  <select name="docid" id="" class="box filter-container-items"
-                    style="width:90% ;height: 37px;margin: 0;">
-                    <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br />
-
-                    <?php 
-                            
-                                $list11 = $database->query("select  * from  doctor order by docname asc;");
-
-                                for ($y=0;$y<$list11->num_rows;$y++){
-                                    $row00=$list11->fetch_assoc();
-                                    $sn=$row00["docname"];
-                                    $id00=$row00["docid"];
-                                    echo "<option value=".$id00.">$sn</option><br/>";
-                                };
-
-                                ?>
-
-                  </select>
-                </td>
-                <td width="12%">
-                  <input type="submit" name="filter" value=" Filter"
-                    class=" btn-primary-soft btn button-icon btn-filter" style="padding: 15px; margin :0;width:100%">
-                  </form>
-                </td>
-
-              </tr>
-            </table>
-
-          </center>
-        </td>
-
-      </tr>
-
-      <?php
+    <?php
                     if($_POST){
                         //print_r($_POST);
                         $sqlpt1="";
@@ -262,34 +203,32 @@
                     }
                 ?>
 
-      <tr>
-        <td colspan="4">
-          <center>
-            <div class="abc scroll">
-              <table width="93%" class="sub-table scrolldown" border="0">
-                <thead>
-                  <tr>
-                    <th class="table-headin">
-                      Session Title
-                    </th>
-                    <th class="table-headin">
-                      Doctor
-                    </th>
-                    <th class="table-headin">
-                      Sheduled Date & Time
-                    </th>
-                    <th class="table-headin">
-                      Max num that can be booked
-                    </th>
-                    <th class="table-headin">
+    <tr>
+      <td colspan="4">
+        <center>
+          <div class="abc scroll">
+            <table width="93%" class="sub-table scrolldown" border="0">
+              <thead>
+                <tr>
+                  <th class="table-headin">
+                    Session Title
+                  </th>
+                  <th class="table-headin">
+                    Doctor
+                  </th>
+                  <th class="table-headin">
+                    Sheduled Date & Time
+                  </th>
+                  <th class="table-headin">
+                    Max num that can be booked
+                  </th>
+                  <th class="table-headin">
+                    Events
+                </tr>
+              </thead>
+              <tbody>
 
-                      Events
-
-                  </tr>
-                </thead>
-                <tbody>
-
-                  <?php
+                <?php
 
                                 
                                 $result= $database->query($sqlmain);
@@ -299,7 +238,6 @@
                                     <td colspan="4">
                                     <br><br><br><br>
                                     <center>
-  
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords !</p>
                                     <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Sessions &nbsp;</font></button>
@@ -348,15 +286,13 @@
                                  
                             ?>
 
-                </tbody>
+              </tbody>
 
-              </table>
-            </div>
-          </center>
-        </td>
-      </tr>
-
-
+            </table>
+          </div>
+        </center>
+      </td>
+    </tr>
 
     </table>
   </div>
@@ -398,7 +334,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="text" name="title" class="input-text" placeholder="Name of this Session" required><br>
+                                    <input type="text" name="title" class="input-text" required><br>
                                 </td>
                             </tr>
                             <tr>
@@ -427,12 +363,12 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Number of Patients/Appointment Numbers : </label>
+                                    <label for="nop" class="form-label">Number of Patients: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="number" name="nop" class="input-text" min="0"  placeholder="The final appointment number for this session depends on this number" required><br>
+                                    <input type="number" name="nop" class="input-text" min="0" required><br>
                                 </td>
                             </tr>
                             <tr>
@@ -526,9 +462,7 @@
             $scheduleid=$row["scheduleid"];
             $title=$row["title"];
             $scheduledate=$row["scheduledate"];
-            $scheduletime=$row["scheduletime"];
-            
-           
+            $scheduletime=$row["scheduletime"];           
             $nop=$row['nop'];
 
 
@@ -541,8 +475,7 @@
                         <h2></h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                            
-                            
+                                                        
                         </div>
                         <div class="abc scroll" style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
@@ -553,8 +486,7 @@
                                 </td>
                             </tr>
                             
-                            <tr>
-                                
+                            <tr>   
                                 <td class="label-td" colspan="2">
                                     <label for="name" class="form-label">Session Title: </label>
                                 </td>
@@ -602,7 +534,6 @@
                                 </td>
                             </tr>
 
-                            
                             <tr>
                             <td colspan="4">
                                 <center>
@@ -670,8 +601,7 @@
                                                  '.substr($ptel,0,25).'
                                                  </td>
   
-                                             </tr>';
-                                             
+                                             </tr>';   
                                          }
                                      }
                 

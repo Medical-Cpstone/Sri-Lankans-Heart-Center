@@ -231,18 +231,13 @@
               <td>
                 <p
                   style="padding:10px;padding-left:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
-                  Upcoming Appointments until Next <?php  
-                                        echo date("l",strtotime("+1 week"));
-                                        ?>
-                </p>
+                  Upcoming Appointments
 
               </td>
               <td>
                 <p
-                  style="text-align:right;padding:10px;padding-right:48px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
-                  Upcoming Sessions until Next <?php  
-                                        echo date("l",strtotime("+1 week"));
-                                        ?>
+                  style="text-align:right;padding:10px;padding-right:480px;padding-bottom:0;font-size:23px;font-weight:700;color:var(--primarycolor);">
+                  Upcoming Sessions
                 </p>
 
               </td>
@@ -282,7 +277,7 @@
                                                     <br><br><br><br>
                                                     <center>                                                  
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords!</p>
                                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
                                                     </a>
                                                     </center>
@@ -310,9 +305,8 @@
                                                             '.$apponum.'
                                                             
                                                         </td>
-
                                                         <td style="font-weight:600;text-align:center;"> &nbsp;'.
-                                                        
+                                                    
                                                         substr($pname,0,25)
                                                         .'</td >
                                                         <td style="font-weight:600;text-align:center;"> &nbsp;'.
@@ -344,21 +338,14 @@
                       <thead>
                         <tr>
                           <th class="table-headin">
-
-
                             Session Title
-
                           </th>
-
                           <th class="table-headin">
                             Doctor
                           </th>
                           <th class="table-headin">
-
-                            Sheduled Date & Time
-
+                            Scheduled Date & Time
                           </th>
-
                         </tr>
                       </thead>
                       <tbody>
@@ -375,7 +362,7 @@
                                                     <center>
                                                     
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords!</p>
                                                     <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Sessions &nbsp;</font></button>
                                                     </a>
                                                     </center>
@@ -411,7 +398,6 @@
                                             ?>
 
                       </tbody>
-
                     </table>
                   </div>
                 </center>

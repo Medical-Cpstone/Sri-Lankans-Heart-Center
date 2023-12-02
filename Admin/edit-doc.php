@@ -25,7 +25,6 @@
             }else{
                 $id2=$id;
             }
-            
             echo $id2."jdfjdfdh";
             if($id2!=$id){
                 $error='1';
@@ -37,22 +36,17 @@
                 $sql1="update webuser set email='$email' where email='$oldemail' ;";
                 $database->query($sql1);
               
-                $error= '4';
-                
-            }
-            
+                $error= '4';         
+            }      
         }else{
             $error='2';
-        }   
-        
+        }         
     }else{
-        //header('location: signup.php');
         $error='3';
     }
-    
-
     header("location: doctors.php?action=edit&error=".$error."&id=".$id);
     ?>
-    
-</body>
-</html>
+
+ </body>
+
+ </html>

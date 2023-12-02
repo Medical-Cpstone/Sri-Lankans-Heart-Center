@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/animations.css">  
-    <link rel="stylesheet" href="../css/main.css">  
-    <link rel="stylesheet" href="../css/admin.css">
-        
-    <title>Doctor</title>
-    <style>
-        .popup{
-            animation: transitionIn-Y-bottom 0.5s;
-        }
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/admin.css">
+
+  <title>Doctor</title>
+  <style>
+  .popup {
+    animation: transitionIn-Y-bottom 0.5s;
+  }
+  </style>
 </head>
+
 <body>
-    <?php
+  <?php
 
     session_start();
 
@@ -29,7 +31,6 @@
         header("location: ../login.php");
     }
     
-    //import database
     include("../connection.php");
 
     if($_POST){
@@ -54,25 +55,18 @@
                 $sql2="insert into webuser values('$email','d')";
                 $database->query($sql1);
                 $database->query($sql2);
-
-                //echo $sql1;
-                //echo $sql2;
-                $error= '4';
-                
-            }
-            
+                $error= '4';           
+            }        
         }else{
             $error='2';
-        }   
-        
+        }        
     }else{
-        //header('location: signup.php');
+
         $error='3';
     }
     
-
     header("location: doctors.php?action=add&error=".$error);
     ?>
-    
 </body>
+
 </html>
