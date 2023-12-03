@@ -252,7 +252,7 @@
                         <h2>Are you sure?</h2>
                         <a class="close" href="settings.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br>'.substr($nameget,0,40).'
+                            You want to delete this record<br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">

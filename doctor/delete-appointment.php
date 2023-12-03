@@ -11,7 +11,7 @@
     } 
     
     if($_GET){
-        //import database
+        
         include("../connection.php");
         $id=$_GET["id"];
         $sql= $database->query("delete from appointment where appoid='$id';");    

@@ -1,10 +1,10 @@
 <?php 
 
-    //import database
+   
     include("../connection.php");
 
     if($_POST){
-        //print_r($_POST);
+        
         $result= $database->query("select * from webuser");
         $name=$_POST['name'];
         $oldemail=$_POST["oldemail"];
@@ -34,7 +34,7 @@
                 $sql1="update webuser set email='$email' where email='$oldemail' ;";
                 $database->query($sql1);
                 echo $sql1;
-                //echo $sql2;
+               
                 $error= '4';             
             }
             
@@ -43,7 +43,7 @@
         }       
         
     }else{
-        //header('location: signup.php');
+       
         $error='3';
     }
     header("location: settings.php?action=edit&error=".$error."&id=".$id);

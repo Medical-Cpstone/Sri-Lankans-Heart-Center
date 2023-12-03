@@ -152,31 +152,7 @@
             <?php echo $list110->num_rows; ?> </p>
         </td>
       </tr>
-      <tr>
-        <td colspan="4" style="padding-top:0px;width: 100%;">
-          <center>
-            <table class="filter-container" border="0">
-              <tr>
-                <td width="10%">
-                </td>
-                <td width="5%" style="text-align: center;">
-                  Date:
-                </td>
-                <td width="30%">
-                  <form action="" method="post">
-                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items"
-                      style="margin: 0;width: 95%;">
-                </td>
-                <td width="12%">
-                  <input type="submit" name="filter" value=" Filter"
-                    class=" btn-primary-soft btn button-icon btn-filter" style="padding: 15px; margin :0;width:100%">
-                  </form>
-                </td>
-              </tr>
-            </table>
-          </center>
-        </td>
-      </tr>
+      
 
       <?php
                 $sqlmain= "select schedule.scheduleid,schedule.title,doctor.docname,schedule.scheduledate,schedule.scheduletime,schedule.nop from schedule inner join doctor on schedule.docid=doctor.docid where doctor.docid=$userid ";
@@ -281,7 +257,7 @@
                         <h2>Are you sure?</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br>('.substr($nameget,0,40).').       
+                            You want to delete this record<br>      
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <a href="delete-session.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
@@ -368,7 +344,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label"><b>Patients that Already registerd for this session:</b> ('.$result12->num_rows."/".$nop.')</label>
+                                    <label for="spec" class="form-label"><b>Patients that Already registered for this session:</b> ('.$result12->num_rows."/".$nop.')</label>
                                     <br><br>
                                 </td>
                             </tr>                       
@@ -401,7 +377,7 @@
                                              <br><br><br><br>
                                              <center>
                                              <br>
-                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords</p>
+                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords</p>
                                              <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
                                              </a>
                                              </center>

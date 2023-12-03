@@ -24,8 +24,6 @@
 <body>
   <?php
 
-    //learn from w3schools.com
-
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -40,23 +38,20 @@
     }
     
 
-    //import database
+
     include("../connection.php");
     $userrow = $database->query("select * from doctor where docemail='$useremail'");
     $userfetch=$userrow->fetch_assoc();
     $userid= $userfetch["docid"];
     $username=$userfetch["docname"];
 
-
-    //echo $userid;
-    //echo $username;
     ?>
   <div class="container">
     <div class="menu">
       <table class="menu-container" border="0">
         <tr>
           <td style="padding:10px" colspan="2">
-            <table border="0" class="profile-container">
+          <table border="0" class="profile-container">
               <tr>
                 <td width="30%" style="padding-left:20px">
                   <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
@@ -169,7 +164,7 @@
             <input type="search" name="search12" class="input-text header-searchbar"
               placeholder="Search Patient name or Email" list="patient">&nbsp;&nbsp;
 
-            <?php
+              <?php
                                 echo '<datalist id="patient">';
                                 $list11 = $database->query($sqlmain);
                              
@@ -211,33 +206,10 @@
       <tr>
         <td colspan="4" style="padding-top:10px;">
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">
-            <?php echo $selecttype." Patients (".$list11->num_rows.")"; ?></p>
+            <?php echo $selecttype." Patients ".$list11->num_rows.""; ?></p>
         </td>
       </tr>
-      <tr>
-        <td colspan="4" style="padding-top:0px;width: 100%;">
-          <center>
-            <table class="filter-container" border="0">
-              <form action="" method="post">
-
-                <td width="30%">
-                  <select name="showonly" id="" class="box filter-container-items"
-                    style="width:90% ;height: 37px;margin: 0;">
-                    <option value="" disabled selected hidden><?php echo $current   ?></option><br />
-                    <option value="my">My Patients Only</option><br />
-                    <option value="all">All Patients</option><br />
-                  </select>
-                </td>
-                <td width="12%">
-                  <input type="submit" name="filter" value=" Filter"
-                    class=" btn-primary-soft btn button-icon btn-filter" style="padding: 15px; margin :0;width:100%">
-              </form>
-        </td>
-      </tr>
-    </table>
-    </center>
-    </td>
-    </tr>
+      
     <tr>
       <td colspan="4">
         <center>

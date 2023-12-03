@@ -9,7 +9,7 @@
         header("location: ../login.php");
     }
     if($_GET){
-        //import database
+       
         include("../connection.php");
         $id=$_GET["id"];
         $sql= $database->query("delete from schedule where scheduleid='$id';");

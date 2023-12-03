@@ -167,11 +167,8 @@
             <table class="filter-container doctor-header" style="border: none;width:95%" border="0">
               <tr>
                 <td>
-                  <h3>Welcome</h3>
+                  <h3>Welcome !</h3>
                   <h1><?php echo $username  ?></h1>
-
-                  <a href="appointment.php" class="non-style-link"><button class="btn-primary btn"
-                      style="width:30%">View My Appointments</button></a>
                   <br>
                   <br>
                 </td>
