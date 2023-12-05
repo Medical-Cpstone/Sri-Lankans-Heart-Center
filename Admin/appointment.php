@@ -163,7 +163,6 @@
 
     <?php
                     if($_POST){
-                        //print_r($_POST);
                         $sqlpt1="";
                         if(!empty($_POST["sheduledate"])){
                             $sheduledate=$_POST["sheduledate"];
@@ -176,8 +175,6 @@
                             $docid=$_POST["docid"];
                             $sqlpt2=" doctor.docid=$docid ";
                         }
-                        //echo $sqlpt2;
-                        //echo $sqlpt1;
                         $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid";
                         $sqllist=array($sqlpt1,$sqlpt2);
                         $sqlkeywords=array(" where "," and ");
@@ -302,8 +299,6 @@
         </center>
       </td>
     </tr>
-
-
 
     </table>
   </div>
@@ -456,10 +451,7 @@
                         <h2>Are you sure?</h2>
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br><br>
-                            Patient Name: &nbsp;<b>'.substr($nameget,0,40).'</b><br>
-                            Appointment number &nbsp; : <b>'.substr($apponum,0,40).'</b><br><br>
-                            
+                            You want to delete this record<br><br>                                        
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <a href="delete-appointment.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;

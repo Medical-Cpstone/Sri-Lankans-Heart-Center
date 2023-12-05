@@ -52,7 +52,7 @@
                 </td>
                 <td style="padding:0px;margin:0px;">
                   <p class="profile-title">Administrator</p>
-                  <p class="profile-subtitle">admin@gmail.com</p>
+                  <p class="profile-subtitle">adminxyz@gmail.com</p>
                 </td>
               </tr>
               <tr>
@@ -203,13 +203,11 @@
                   <?php
 
                                 $result= $database->query($sqlmain);
-
                                 if($result->num_rows==0){
                                     echo '<tr>
                                     <td colspan="4">
                                     <br><br><br><br>
-                                    <center>
-                                    
+                                    <center>                                    
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords!</p>
                                     <a class="non-style-link" href="doctors.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Doctors &nbsp;</font></button>
@@ -261,7 +259,6 @@
           </center>
         </td>
       </tr>
-
     </table>
   </div>
   </div>
@@ -279,7 +276,7 @@
                         <h2>Are you sure?</h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            You want to delete '.substr($nameget,0,40).'                          
+                            You want to delete                          
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
@@ -385,7 +382,7 @@
                 $error_1=$_GET["error"];
                 $errorlist= array(
                     '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconfirm Password</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -648,7 +645,7 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="password" name="password" class="input-text" placeholder="Defind a Password" required><br>
+                                            <input type="password" name="password" class="input-text" placeholder="Provide a Password" required><br>
                                         </td>
                                     </tr><tr>
                                         <td class="label-td" colspan="2">

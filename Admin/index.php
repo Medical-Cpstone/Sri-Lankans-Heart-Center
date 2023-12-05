@@ -57,7 +57,7 @@
                 </td>
                 <td style="padding:0px;margin:0px;">
                   <p class="profile-title">Administrator</p>
-                  <p class="profile-subtitle">admin@gmail.com</p>
+                  <p class="profile-subtitle">adminxyz@gmail.com</p>
                 </td>
               </tr>
               <tr>
@@ -127,7 +127,7 @@
           </p>
           <p class="heading-sub12" style="padding: 0;margin: 0;">
             <?php 
-                                date_default_timezone_set('Asia/Kolkata');
+                                date_default_timezone_set('Asia/Colombo');
         
                                 $today = date('Y-m-d');
                                 echo $today;

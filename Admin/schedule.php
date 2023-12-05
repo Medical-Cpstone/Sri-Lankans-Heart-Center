@@ -50,7 +50,7 @@
                 </td>
                 <td style="padding:0px;margin:0px;">
                   <p class="profile-title">Administrator</p>
-                  <p class="profile-subtitle">admin@edoc.com</p>
+                  <p class="profile-subtitle">adminxyz@gmail.com</p>
                 </td>
               </tr>
               <tr>
@@ -171,7 +171,6 @@
 
     <?php
                     if($_POST){
-                        //print_r($_POST);
                         $sqlpt1="";
                         if(!empty($_POST["sheduledate"])){
                             $sheduledate=$_POST["sheduledate"];
@@ -239,7 +238,7 @@
                                     <br><br><br><br>
                                     <center>
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords!</p>
                                     <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Sessions &nbsp;</font></button>
                                     </a>
                                     </center>
@@ -442,8 +441,7 @@
                         <h2>Are you sure?</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br>'.substr($nameget,0,40).'
-                            
+                            You want to delete this record<br>                           
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <a href="delete-session.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
@@ -568,7 +566,7 @@
                                              <center>
                                       
                                              <br>
-                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords</p>
+                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  could not find anything related to your keywords!</p>
                                              <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
                                              </a>
                                              </center>
@@ -625,7 +623,6 @@
         
     ?>
   </div>
-
 </body>
 
 </html>
