@@ -170,33 +170,8 @@
               <tr>
                 <td>
                   <h1><?php echo $username  ?></h1>
-                  <h3>Channel A Doctor Here</h3>
-                  <form action="schedule.php" method="post" style="display: flex">
-
-                    <input type="search" name="search" class="input-text "
-                      placeholder="Search for a Doctor and we will find the session available" list="doctors"
-                      style="width:45%;">&nbsp;&nbsp;
-
-                    <?php
-                                    echo '<datalist id="doctors">';
-                                    $list11 = $database->query("select  docname,docemail from  doctor;");
-    
-                                    for ($y=0;$y<$list11->num_rows;$y++){
-                                        $row00=$list11->fetch_assoc();
-                                        $d=$row00["docname"];
-                                        
-                                        echo "<option value='$d'><br/>";
-                                        
-                                    };
-    
-                                echo ' </datalist>';
-    ?>
-
-                    <input type="Submit" value="Search" class="login-btn btn-primary btn"
-                      style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
-
-                    <br>
-                    <br>
+                  <h3>Channel A Doctor</h3>
+                 
 
                 </td>
               </tr>
@@ -314,7 +289,7 @@
                   <?php
                                             $nextweek=date("Y-m-d",strtotime("+1 week"));
                                                 $sqlmain= "select * from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  where  patient.pid=$userid  and schedule.scheduledate>='$today' order by schedule.scheduledate asc";
-                                                //echo $sqlmain;
+                                               
                                                 $result= $database->query($sqlmain);
                 
                                                 if($result->num_rows==0){

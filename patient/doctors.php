@@ -127,7 +127,7 @@
             </button></a>
         </td>
         <td>
-          <form action="" method="post" class="header-search">
+        <form action="" method="post" class="header-search">
             <input type="search" name="search" class="input-text header-searchbar"
               placeholder="Search doctor name or email" list="doctors">&nbsp;&nbsp;
 
@@ -148,7 +148,7 @@
             <input type="Submit" value="Search" class="login-btn btn-primary btn"
               style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
           </form>
-        </td>
+                              </td>
       </tr>
       <tr>
         <td colspan="4" style="padding-top:10px;">

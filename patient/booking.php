@@ -46,7 +46,7 @@
     $username=$userfetch["pname"];
 
 
-    date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('Asia/Colombo');
 
     $today = date('Y-m-d');
 
@@ -135,7 +135,7 @@
         <td>
           <form action="schedule.php" method="post" class="header-search">
 
-            <input type="search" name="search" class="input-text header-searchbar"
+          <input type="search" name="search" class="input-text header-searchbar"
               placeholder="Search Doctor name or Email or Date (YYYY-MM-DD)" list="doctors">&nbsp;&nbsp;
 
             <?php

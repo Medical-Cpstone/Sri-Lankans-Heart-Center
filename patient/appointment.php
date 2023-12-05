@@ -167,34 +167,10 @@
         <td colspan="4" style="padding-top:10px;width: 100%;">
 
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">My Bookings
-            <?php echo $result->num_rows; ?></p>
+          </p>
         </td>
       </tr>
-      <tr>
-        <td colspan="4" style="padding-top:0px;width: 100%;">
-          <center>
-            <table class="filter-container" border="0">
-              <tr>
-                <td width="10%">
-                </td>
-                <td width="5%" style="text-align: center;">
-                  Date:
-                </td>
-                <td width="30%">
-                  <form action="" method="post">
-                    <input type="date" name="sheduledate" id="date" class="input-text filter-container-items"
-                      style="margin: 0;width: 95%;">
-                </td>
-                <td width="12%">
-                  <input type="submit" name="filter" value=" Filter"
-                    class=" btn-primary-soft btn button-icon btn-filter" style="padding: 15px; margin :0;width:100%">
-                  </form>
-                </td>
-              </tr>
-            </table>
-          </center>
-        </td>
-      </tr>
+      
       <tr>
         <td colspan="4">
           <center>
@@ -324,8 +300,7 @@
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
                             You want to Cancel this Appointment?<br><br>
-                            Session Name: &nbsp;<b>'.substr($title,0,40).'</b><br>
-                            Doctor name&nbsp; : <b>'.substr($docname,0,40).'</b><br><br>
+                            
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
