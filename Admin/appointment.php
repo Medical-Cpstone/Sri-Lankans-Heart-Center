@@ -122,7 +122,6 @@
         </td>
         <td>
           <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Appointment Manager</p>
-
         </td>
         <td width="15%">
           <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">

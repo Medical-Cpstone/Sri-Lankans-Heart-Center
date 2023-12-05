@@ -127,18 +127,13 @@
           </p>
           <p class="heading-sub12" style="padding: 0;margin: 0;">
             <?php 
-                                date_default_timezone_set('Asia/Colombo');
-        
+                                date_default_timezone_set('Asia/Colombo');       
                                 $today = date('Y-m-d');
                                 echo $today;
-
-
                                 $patientrow = $database->query("select  * from  patient;");
                                 $doctorrow = $database->query("select  * from  doctor;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
-
-
                                 ?>
           </p>
         </td>
@@ -390,8 +385,7 @@
                                                         <td style="text-align:center;text-align:center;"">
                                                             '.substr($scheduledate,0,10).' '.substr($scheduletime,0,5).'
                                                         </td>                  
-                                                    </tr>';
-                                                    
+                                                    </tr>';                                                    
                                                 }
                                             }
                                                  
@@ -428,8 +422,6 @@
     </table>
   </div>
   </div>
-
-
 </body>
 
 </html>

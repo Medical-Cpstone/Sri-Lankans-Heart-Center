@@ -22,9 +22,8 @@
 </head>
 
 <body>
+
   <?php
-
-
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -34,12 +33,10 @@
 
     }else{
         header("location: ../login.php");
-    }
-    
-    include("../connection.php");
-
-    
+    }    
+    include("../connection.php");  
     ?>
+
   <div class="container">
     <div class="menu">
       <table class="menu-container" border="0">
@@ -121,34 +118,6 @@
             </button></a>
 
         </td>
-        <td>
-
-          <form action="" method="post" class="header-search">
-
-            <input type="search" name="search" class="input-text header-searchbar"
-              placeholder="Search Patient name or Email" list="patient">&nbsp;&nbsp;
-
-            <?php
-                                echo '<datalist id="patient">';
-                                $list11 = $database->query("select  pname,pemail from patient;");
-
-                                for ($y=0;$y<$list11->num_rows;$y++){
-                                    $row00=$list11->fetch_assoc();
-                                    $d=$row00["pname"];
-                                    $c=$row00["pemail"];
-                                    echo "<option value='$d'><br/>";
-                                    echo "<option value='$c'><br/>";
-                                };
-
-                            echo ' </datalist>';
-?>
-
-            <input type="Submit" value="Search" class="login-btn btn-primary btn"
-              style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
-
-          </form>
-
-        </td>
         <td width="15%">
 
           <p class="heading-sub12" style="padding: 0;margin: 0;">
@@ -158,8 +127,7 @@
 
       <tr>
         <td colspan="4" style="padding-top:10px;">
-          <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Patients
-            <?php echo $list11->num_rows; ?></p>
+          <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Patients</p>
         </td>
 
       </tr>
@@ -318,12 +286,9 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     P-'.$id.'<br><br>
-                                </td>
-                                
-                            </tr>
-                            
-                            <tr>
-                                
+                                </td>                               
+                            </tr>                            
+                            <tr>                                
                                 <td class="label-td" colspan="2">
                                     <label for="name" class="form-label">Name: </label>
                                 </td>
@@ -331,8 +296,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     '.$name.'<br><br>
-                                </td>
-                                
+                                </td>                                
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
@@ -366,8 +330,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Address: </label>
-                                    
+                                    <label for="spec" class="form-label">Address: </label>                                    
                                 </td>
                             </tr>
                             <tr>
@@ -375,8 +338,7 @@
                             '.$address.'<br><br>
                             </td>
                             </tr>
-                            <tr>
-                                
+                            <tr>                                
                                 <td class="label-td" colspan="2">
                                     <label for="name" class="form-label">Date of Birth: </label>
                                 </td>
@@ -384,17 +346,14 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     '.$dob.'<br><br>
-                                </td>
-                                
+                                </td>                                
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <a href="patient.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
                                                       
-                                </td>
-              
+                                </td>              
                             </tr>  
-
                         </table>
                         </div>
                     </center>
@@ -407,7 +366,6 @@
 
 ?>
   </div>
-
 </body>
 
 </html>
