@@ -154,36 +154,7 @@
               <font class="tn-in-text">Back</font>
             </button></a>
         </td>
-        <td>
-          <form action="" method="post" class="header-search">
-
-            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search doctor name"
-              list="doctors" value="<?php  echo $insertkey ?>">&nbsp;&nbsp;
-
-            <?php
-                                            echo '<datalist id="doctors">';
-                                            $list11 = $database->query("select DISTINCT * from  doctor;");
-                                            $list12 = $database->query("select DISTINCT * from  schedule GROUP BY title;");
-                             
-                                            for ($y=0;$y<$list11->num_rows;$y++){
-                                                $row00=$list11->fetch_assoc();
-                                                $d=$row00["docname"];
-                                               
-                                                echo "<option value='$d'><br/>";                                              
-                                            };
-                                            for ($y=0;$y<$list12->num_rows;$y++){
-                                                $row00=$list12->fetch_assoc();
-                                                $d=$row00["title"];
-                                               
-                                                echo "<option value='$d'><br/>";
-                                                                                         };
-                                        echo ' </datalist>';
-            ?>
-
-            <input type="Submit" value="Search" class="login-btn btn-primary btn"
-              style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
-          </form>
-        </td>
+       
       </tr>
 
       <tr>

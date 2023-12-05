@@ -523,7 +523,7 @@
                             <h2>Edit Successfully!</h2>
                             <a class="close" href="settings.php">&times;</a>
                             <div class="content">
-                                If You change your email also Please logout and login again with your new email
+                                If You change your email also please logout and login again with your new email
                                 
                             </div>
                             <div style="display: flex;justify-content: center;">
