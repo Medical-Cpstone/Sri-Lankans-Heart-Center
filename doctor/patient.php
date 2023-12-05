@@ -157,34 +157,7 @@
             </button></a>
 
         </td>
-        <td>
-
-          <form action="" method="post" class="header-search">
-
-            <input type="search" name="search12" class="input-text header-searchbar"
-              placeholder="Search Patient name or Email" list="patient">&nbsp;&nbsp;
-
-              <?php
-                                echo '<datalist id="patient">';
-                                $list11 = $database->query($sqlmain);
-                             
-                                for ($y=0;$y<$list11->num_rows;$y++){
-                                    $row00=$list11->fetch_assoc();
-                                    $d=$row00["pname"];
-                                    $c=$row00["pemail"];
-                                    echo "<option value='$d'><br/>";
-                                    echo "<option value='$c'><br/>";
-                                };
-
-                            echo ' </datalist>';
-?>
-
-
-            <input type="Submit" value="Search" name="search" class="login-btn btn-primary btn"
-              style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
-
-          </form>
-        </td>
+        
         <td width="15%">
           <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
             Today's Date
@@ -205,8 +178,7 @@
       </tr>
       <tr>
         <td colspan="4" style="padding-top:10px;">
-          <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">
-            <?php echo $selecttype." Patients ".$list11->num_rows.""; ?></p>
+          <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">My Patients</p>
         </td>
       </tr>
       
