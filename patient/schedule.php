@@ -37,7 +37,7 @@
         header("location: ../login.php");
     }
     
-    //import database
+    
     include("../connection.php");
     $userrow = $database->query("select * from patient where pemail='$useremail'");
     $userfetch=$userrow->fetch_assoc();
@@ -160,7 +160,7 @@
       <tr>
         <td colspan="4" style="padding-top:10px;width: 100%;">
           <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">
-            <?php echo $searchtype." Sessions"." ".$result->num_rows." "; ?> </p>
+          </p>
           <p class="heading-main12" style="margin-left: 45px;font-size:22px;color:rgb(49, 49, 49)">
             <?php echo $q.$insertkey.$q ; ?> </p>
         </td>
