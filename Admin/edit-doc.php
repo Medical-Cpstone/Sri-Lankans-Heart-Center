@@ -4,7 +4,6 @@
     include("../connection.php");
 
     if($_POST){
-        //print_r($_POST);
         $result= $database->query("select * from webuser");
         $name=$_POST['name'];
         $nic=$_POST['nic'];
@@ -19,7 +18,6 @@
         if ($password==$cpassword){
             $error='3';
             $result= $database->query("select doctor.docid from doctor inner join webuser on doctor.docemail=webuser.email where webuser.email='$email';");
-            //$resultqq= $database->query("select * from doctor where docid='$id';");
             if($result->num_rows==1){
                 $id2=$result->fetch_assoc()["docid"];
             }else{
