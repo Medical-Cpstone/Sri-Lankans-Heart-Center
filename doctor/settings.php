@@ -48,9 +48,12 @@
     include("../connection.php");
     $userrow = $database->query("select * from doctor where docemail='$useremail'");
     $userfetch=$userrow->fetch_assoc();
-    $userid= $userfetch["docid"];
-    $username=$userfetch["docname"];
-    
+    $userid = null;
+    $username = null;
+    if ($userfetch !== null) {
+        $userid = $userfetch["docid"];
+        $username = $userfetch["docname"];
+    }
     ?>
   <div class="container">
     <div class="menu">

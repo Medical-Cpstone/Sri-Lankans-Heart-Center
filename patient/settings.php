@@ -45,8 +45,13 @@
     include("../connection.php");
     $userrow = $database->query("select * from patient where pemail='$useremail'");
     $userfetch=$userrow->fetch_assoc();
-    $userid= $userfetch["pid"];
-    $username=$userfetch["pname"];
+    $userid = null;
+    $username = null;
+if ($userfetch !== null) {
+  $userid= $userfetch["pid"];
+  $username=$userfetch["pname"];
+}
+
 
     ?>
   <div class="container">
