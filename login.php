@@ -80,7 +80,7 @@
             }
             
         }else{
-            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">We cant found any acount for this email.</label>';
+            $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">We cannot find any account for this email.</label>';
         }
 
         
