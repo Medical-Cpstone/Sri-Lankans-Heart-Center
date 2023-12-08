@@ -148,8 +148,7 @@
       </tr>
       <tr>
         <td colspan="4" style="padding-top:10px;width: 100%;">
-          <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">My Sessions
-            <?php echo $list110->num_rows; ?> </p>
+          <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">My Sessions</p>
         </td>
       </tr>
       

@@ -136,7 +136,7 @@
                             //echo $sqlmain;
                             $insertkey=$keyword;
                             $searchtype="Search Result : ";
-                            $q='"';
+                            $q='';
                         }
 
                     }
