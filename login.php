@@ -150,7 +150,11 @@
         </form>
       </table>
     </div>
+    <br><br>
+    <label for="" class="sub-text" style="font-weight: 280;">Back to home page </label>
+    <a href="index.html" class="hover-link1 non-style-link" style="color:orangered">Home</a>
   </center>
+
 </body>
 
 </html>
