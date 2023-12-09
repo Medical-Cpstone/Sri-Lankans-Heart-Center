@@ -44,7 +44,3 @@
     }
     header("location: doctors.php?action=edit&error=".$error."&id=".$id);
     ?>
-
- </body>
-
- </html>
